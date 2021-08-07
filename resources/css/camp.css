@@ -107,7 +107,7 @@
 }
 .first_line img, .second_line img{
     padding: 50px;
-    background: url(img/Ellipse_28.svg) center no-repeat;
+    background: url(/img/Ellipse_28.svg) center no-repeat;
     
 }
 .haos{

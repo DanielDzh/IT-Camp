@@ -17,7 +17,7 @@ use App\Http\Controllers\Admin\EntertainmentController;
 
 Route::get('/', function () {
     //return view('camp/index');
-    return view('welcome');
+    return view('camp/index');
 });
 
 Auth::routes();
