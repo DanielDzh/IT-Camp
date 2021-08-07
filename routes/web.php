@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Admin\EntertainmentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('camp/index');
+    //return view('camp/index');
+    return view('welcome');
 });
 
 Auth::routes();
@@ -23,5 +26,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
-    Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'] );
+    Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'] )->name('homeAdmin');
+    
 });
+
+Route::resource('entertainments', EntertainmentController::class);

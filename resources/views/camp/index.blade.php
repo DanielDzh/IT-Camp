@@ -337,7 +337,7 @@
                         
                         <div class="slide">
                             <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.svg" alt="">
+                                <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.png" alt="">
                                 <div class = "kavuchka">
                                 <img src="img/“.svg" alt="">
                                 </div>

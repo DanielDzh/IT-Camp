@@ -1,4 +1,4 @@
-@extends('layouts.admin_lyaout')
+@extends('layouts.admin_layout')
 
 @section('title','Главная')
 
@@ -27,7 +27,7 @@
               <div class="inner">
                 <h3>150</h3>
 
-                <p>New Orders</p>
+                <p>news</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -55,9 +55,9 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+                <h3>{{$users_count}}</h3>
 
-                <p>User Registrations</p>
+                <p>Зареєстровані користувачі</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
