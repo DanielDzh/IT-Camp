@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Intertainment extends Model
+class Teacher extends Model
 {
     use HasFactory;
-
     public $timestamps = false;
 
-    protected $fillable = [ 'url', 'title', 'created_at', 'updated_at'];
+    protected $fillable = [ 'name','lastname','profession', 'url', 'alt_name', 'description','created_at', 'updated_at'];
 
+    
 }

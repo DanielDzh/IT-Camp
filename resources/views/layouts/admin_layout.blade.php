@@ -166,13 +166,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link ">
+                <a href="{{route('teachers.index')}}" class="nav-link ">
                   
                   <p>Всі викладачі</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="{{route('teachers.create')}}" class="nav-link">
                   
                   <p>Додати </p>
                 </a>

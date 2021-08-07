@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\EntertainmentController;
+use App\Http\Controllers\Admin\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\Admin\EntertainmentController;
 
 Route::get('/', function () {
     //return view('camp/index');
-    return view('camp/index');
+    return view('welcome');
 });
 
 Auth::routes();
@@ -31,3 +32,4 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
 });
 
 Route::resource('entertainments', EntertainmentController::class);
+Route::resource('teachers', TeacherController::class);

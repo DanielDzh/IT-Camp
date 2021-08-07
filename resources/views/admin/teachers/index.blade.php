@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title','Всі розваги')
+@section('title','Додати розваги')
 
 @section('content')
 <!-- Content Header (Page header) -->
@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Всі розваги</h1>
+            <h1 class="m-0">Викладачі</h1>
           </div><!-- /.col -->
           @if (session('success'))
                 <div class="alert alert-success" role="alert">
@@ -42,9 +42,18 @@
                     id
                 </th>
                 <th style="width: 20%">
+                    Name
+                </th>
+                <th style="width: 20%">
+                    Lastname
+                </th>
+                <th style="width: 20%">
+                    Profession
+                </th>
+                <th style="width: 20%">
                     Description
                 </th>
-                <th style="width: 30%">
+                <th style="width: 20%">
                     Imeges
                 </th>
                 <th>
@@ -59,19 +68,28 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($entertainments as $entertainment )
+            @foreach($teachers as $teacher )
             <tr>
                 <td>
-                    {{ $entertainment['id'] }}
+                    {{ $teacher['id'] }}
                 </td>
                 <td>
-                    {{ $entertainment['description'] }}
+                    {{ $teacher['name'] }}
                 </td>
                 <td>
-                    {{ $entertainment['url'] }}
+                    {{ $teacher['lastname'] }}
                 </td>
                 <td>
-                    {{ $entertainment['alt_name'] }}
+                    {{ $teacher['profession'] }}
+                </td>
+                <td>
+                    {{ $teacher['description'] }}
+                </td>
+                <td>
+                    {{ $teacher['url'] }}
+                </td>
+                <td>
+                    {{ $teacher['alt_name'] }}
                 </td>
                 <td class="project_progress">
                     
@@ -81,12 +99,12 @@
                 </td>
                 <td class="project-actions text-right">
                     
-                    <a class="btn btn-info btn-sm" href="{{route('entertainments.edit', $entertainment['id'] )}}">
+                    <a class="btn btn-info btn-sm" href="{{route('teachers.edit', $teacher['id'] )}}">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Edit
                     </a>
-                    <form action="{{route('entertainments.destroy', $entertainment['id'] )}}" method="post">
+                    <form action="{{route('teachers.destroy', $teacher['id'] )}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >
