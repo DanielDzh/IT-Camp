@@ -204,13 +204,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link ">
+                <a href="{{route('photos.index')}}" class="nav-link ">
                   
                   <p>Всі зображення</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="{{route('photos.create')}}" class="nav-link">
                   
                   <p>Додати </p>
                 </a>

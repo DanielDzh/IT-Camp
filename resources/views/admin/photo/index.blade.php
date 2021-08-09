@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title','Відгуки')
+@section('title','Всі картинки')
 
 @section('content')
 <!-- Content Header (Page header) -->
@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Відгуки</h1>
+            <h1 class="m-0">Всі картинки</h1>
           </div><!-- /.col -->
           @if (session('success'))
                 <div class="alert alert-success" role="alert">
@@ -41,20 +41,8 @@
                 <th style="width: 1%">
                     id
                 </th>
-                <th style="width: 20%">
-                    Name
-                </th>
-                <th style="width: 20%">
-                    Lastname
-                </th>
                 
-                <th style="width: 20%">
-                    Description
-                </th>
-                <th>
-                    Publishdate
-                </th>
-                <th style="width: 20%">
+                <th style="width: 30%">
                     Imeges
                 </th>
                 <th>
@@ -69,42 +57,32 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($reviews as $review )
+            @foreach($photos as $photo )
             <tr>
                 <td>
-                    {{ $review['id'] }}
-                </td>
-                <td>
-                    {{ $review['name'] }}
-                </td>
-                <td>
-                    {{ $review['lastname'] }}
-                </td>
-                <td>
-                    {{ $review['description'] }}
-                </td>
-                <td>
-                    {{ $review['publishdate'] }}
-                </td>
-                <td>
-                    {{ $review['url'] }}
-                </td>
-                <td>
-                    {{ $review['alt_name'] }}
+                    {{ $photo['id'] }}
                 </td>
                 
+                <td>
+                    {{ $photo['url'] }}
+                </td>
+                <td>
+                    {{ $photo['alt_name'] }}
+                </td>
                 <td class="project_progress">
                     
                 </td>
-                
+                <td class="project-state">
+                    <span class="badge badge-success">Success</span>
+                </td>
                 <td class="project-actions text-right">
                     
-                    <a class="btn btn-info btn-sm" href="{{route('reviews.edit', $review['id'] )}}">
+                    <a class="btn btn-info btn-sm" href="{{route('photos.edit', $photo['id'] )}}">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Edit
                     </a>
-                    <form action="{{route('reviews.destroy', $review['id'] )}}" method="post">
+                    <form action="{{route('photos.destroy', $photo['id'] )}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >

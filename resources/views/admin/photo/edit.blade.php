@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title','Додати відгук')
+@section('title','Edit photos')
 
 @section('content')
 <!-- Content Header (Page header) -->
@@ -8,8 +8,9 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Додати відгук</h1>
+            <h1 class="m-0">Edit photos :{{$photos['ait_name']}}</h1>
           </div><!-- /.col -->
+          
            
 
 
@@ -33,58 +34,36 @@
               
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{route('reviews.store')}}" method="post">
+              
+              <form action="{{route('photos.update', $photos['id'])}}" method="post">
                   @csrf
+                  @method('PUT')
                 <div class="card-body">
-
-                 <div class="form-group">
-                    <label for="exampleInputEmail1">Name</label>
-                    <input type="text" name="name" class="form-control" id="text" placeholder="Name" required>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Lastname</label>
-                    <input type="text" name="lastname" class="form-control" id="text" placeholder="Lastname" required>
-                  </div>
-
                   
-
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Description</label>
-                    <input type="text" name="description" class="form-control" id="text" placeholder="Description" required>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Publishdate</label>
-                    <input type="text" name="publishdate" class="form-control" id="text" placeholder="Profession" required>
-                  </div>
                   
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Alt_name</label>
-                    <input type="text" name="alt_name" class="form-control" id="text" placeholder="Alt_name" required>
+                    <label for="exampleInputEmail1">Назва зображення</label>
+                    <input type="text" value="{{$photos['alt_name']}}" name="alt_name" class="form-control" id="text" placeholder="Назва зображення" required>
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputFile">Add imeges</label>
+                    <label for="exampleInputFile">Додати зображення</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" name="url" class="custom-file-input" id="exampleInputFile" required>
+                        <input type="file" value="{{$photos['url']}}" name="url" class="custom-file-input" id="exampleInputFile" required>
                         <label class="custom-file-label" for="exampleInputFile">Виберіть зображення</label>
                       </div>
-                        
                       <div class="input-group-append">
                         <span class="input-group-text">Переглянути</span>
                       </div>
-
                     </div>
                   </div>
-                 
                   
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Додати</button>
+                  <button type="submit" class="btn btn-primary">Update</button>
                 </div>
               </form>
             </div>
@@ -94,9 +73,9 @@
     </section>
     <!-- /.content -->
     <div class="row">
-            <a href="{{route('reviews.index')}}" class="nav-link ">
+            <a href="{{route('photos.index')}}" class="nav-link ">
                     <div class="card-footer">
-                    <button type="" class="btn btn-primary">Всі відгуки</button>
+                    <button type="" class="btn btn-primary">Всі розваги</button>
                     </div>
                 </a>
           </div>

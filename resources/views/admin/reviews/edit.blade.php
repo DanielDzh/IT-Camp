@@ -77,10 +77,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Active</label>
-                    <input type="text" value="{{$reviews['active']}}" name="active" class="form-control" id="text" placeholder="Alt_name" required>
-                  </div>
+                  
                   
                 </div>
                 <!-- /.card-body -->
