@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title','Викладачі')
+@section('title','Відгуки')
 
 @section('content')
 <!-- Content Header (Page header) -->
@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Викладачі</h1>
+            <h1 class="m-0">Відгуки</h1>
           </div><!-- /.col -->
           @if (session('success'))
                 <div class="alert alert-success" role="alert">
@@ -47,11 +47,12 @@
                 <th style="width: 20%">
                     Lastname
                 </th>
-                <th style="width: 20%">
-                    Profession
-                </th>
+                
                 <th style="width: 20%">
                     Description
+                </th>
+                <th>
+                    Publishdate
                 </th>
                 <th style="width: 20%">
                     Imeges
@@ -68,43 +69,44 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($teachers as $teacher )
+            @foreach($reviews as $review )
             <tr>
                 <td>
-                    {{ $teacher['id'] }}
+                    {{ $review['id'] }}
                 </td>
                 <td>
-                    {{ $teacher['name'] }}
+                    {{ $review['name'] }}
                 </td>
                 <td>
-                    {{ $teacher['lastname'] }}
+                    {{ $review['lastname'] }}
                 </td>
                 <td>
-                    {{ $teacher['profession'] }}
+                    {{ $review['description'] }}
                 </td>
                 <td>
-                    {{ $teacher['description'] }}
+                    {{ $review['publishdate'] }}
                 </td>
                 <td>
-                    {{ $teacher['url'] }}
+                    {{ $review['url'] }}
                 </td>
                 <td>
-                    {{ $teacher['alt_name'] }}
+                    {{ $review['alt_name'] }}
+                </td>
+                <td>
+                    {{ $review['active'] }}
                 </td>
                 <td class="project_progress">
                     
                 </td>
-                <td class="project-state">
-                    <span class="badge badge-success">Success</span>
-                </td>
+                
                 <td class="project-actions text-right">
                     
-                    <a class="btn btn-info btn-sm" href="{{route('teachers.edit', $teacher['id'] )}}">
+                    <a class="btn btn-info btn-sm" href="{{route('reviews.edit', $review['id'] )}}">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Edit
                     </a>
-                    <form action="{{route('teachers.destroy', $teacher['id'] )}}" method="post">
+                    <form action="{{route('reviews.destroy', $review['id'] )}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >

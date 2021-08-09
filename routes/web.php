@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\EntertainmentController;
 use App\Http\Controllers\Admin\TeacherController;
+use App\Http\Controllers\Admin\ReviewController;
+use App\Http\Controllers\Auth\RegisterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +36,5 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
 
 Route::resource('entertainments', EntertainmentController::class);
 Route::resource('teachers', TeacherController::class);
+Route::resource('users', RegisterController::class);
+Route::resource('reviews', ReviewController::class);

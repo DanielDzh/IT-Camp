@@ -76,7 +76,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="" class="nav-link">
               
               <i class="nav-icon fas fa-portrait"></i>
               <p>
@@ -86,7 +86,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link ">
+                <a href="{{route('users.index')}}" class="nav-link ">
                   
                   <p>Всі користувачі</p>
                 </a>
@@ -243,13 +243,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link ">
+                <a href="{{route('reviews.index')}}" class="nav-link ">
                   
                   <p>Всі відгуки</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="{{route('reviews.create')}}" class="nav-link">
                   
                   <p>Додати </p>
                 </a>
