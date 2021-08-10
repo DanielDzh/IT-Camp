@@ -50,17 +50,11 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputFile">Додати зображення</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" value="{{$entertainments['url']}}" name="url" class="custom-file-input" id="exampleInputFile" required>
-                        <label class="custom-file-label" for="exampleInputFile">Виберіть зображення</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Переглянути</span>
-                      </div>
+                        <label for="feature_image">Додати зображення</label>
+                        <input type="text" name="url" value="{{$entertainments['url']}}" id="feature_image"class="form-control" name="feature_image" value="" readonly>
+                        <img src="{{$entertainments['url']}}" alt=""  class="img-uploaded" > 
+                        <a href="" class="popup_selector" data-inputid="feature_image">Select Image</a>
                     </div>
-                  </div>
                   
                 </div>
                 <!-- /.card-body -->
