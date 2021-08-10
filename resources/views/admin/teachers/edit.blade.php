@@ -58,10 +58,14 @@
                     <input type="text" value="{{$teachers['description']}}" name="description" class="form-control" id="text" placeholder="Description" required>
                   </div>
                   
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="exampleInputEmail1">Alt_name</label>
                     <input type="text" value="{{$teachers['alt_name']}}" name="alt_name" class="form-control" id="text" placeholder="Alt_name" required>
-                  </div>
+                  </div> -->
+                  <div class="form-group">
+                        <label for="exampleInputEmail1">Alt_name</label>
+                        <textarea name="alt_name" class="editor">{{$teachers['alt_name']}}</textarea>
+                     </div>
 
                   <div class="form-group">
                         <label for="feature_image">Додати зображення</label>

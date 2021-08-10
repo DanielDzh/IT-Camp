@@ -38,15 +38,16 @@
                 <div class="card-body">
                 
                   
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="exampleInputEmail1">Назва зображення</label>
                     <input type="text" name="alt_name" class="form-control" id="text" placeholder="Назва зображення" required>
-                  </div>
-                    <!-- <div class="form-group">
-                        <textarea name="text" class="editor">
-                        Welcome to TinyMCE!
+                  </div> -->
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Alt_name</label>
+                        <textarea name="alt_name" class="editor">
+                        
                         </textarea>
-                     </div> -->
+                     </div> 
                     <div class="form-group">
                         <label for="feature_image">Додати зображення</label>
                         <input type="text" name="url" id="feature_image"class="form-control" name="feature_image" value="" readonly>

@@ -44,10 +44,14 @@
                     <input type="text" value="{{$entertainments['description']}}" name="description" class="form-control" id="text" placeholder="Опис розваги" required>
                   </div>
                   
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="exampleInputEmail1">Назва зображення</label>
                     <input type="text" value="{{$entertainments['alt_name']}}" name="alt_name" class="form-control" id="text" placeholder="Назва зображення" required>
-                  </div>
+                  </div> -->
+                  <div class="form-group">
+                        <label for="exampleInputEmail1">Alt_name</label>
+                        <textarea name="alt_name" class="editor">{{$entertainments['alt_name']}}</textarea>
+                     </div>
 
                   <div class="form-group">
                         <label for="feature_image">Додати зображення</label>

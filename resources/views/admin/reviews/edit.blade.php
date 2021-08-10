@@ -60,11 +60,14 @@
                     <input type="text" value="{{$reviews['publishdate']}}" name="publishdate" class="form-control" id="text" placeholder="Publishdate" required>
                   </div>
                   
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="exampleInputEmail1">Alt_name</label>
                     <input type="text" value="{{$reviews['alt_name']}}" name="alt_name" class="form-control" id="text" placeholder="Alt_name" required>
-                  </div>
-
+                  </div> -->
+                  <div class="form-group">
+                        <label for="exampleInputEmail1">Alt_name</label>
+                        <textarea name="alt_name" class="editor">{{$reviews['alt_name']}}</textarea>
+                     </div>
                   <div class="form-group">
                         <label for="feature_image">Додати зображення</label>
                         <input type="text" name="url" value="{{$reviews['url']}}" id="feature_image"class="form-control" name="feature_image" value="" readonly>
