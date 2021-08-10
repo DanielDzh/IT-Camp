@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Edit photos :{{$photos['alt_name']}}</h1>
+            <h1 class="m-0">Edit photos :{{$photos['url']}}</h1>
           </div><!-- /.col -->
           
            
@@ -41,11 +41,14 @@
                 <div class="card-body">
                   
                   
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="exampleInputEmail1">Назва зображення</label>
                     <input type="text" value="{{$photos['alt_name']}}" name="alt_name" class="form-control" id="text" placeholder="Назва зображення" required>
-                  </div>
-
+                  </div> -->
+                  <div class="form-group">
+                        <label for="exampleInputEmail1">Alt_name</label>
+                        <textarea name="alt_name" class="editor">{{$photos['alt_name']}}</textarea>
+                     </div>
                   <div class="form-group">
                         <label for="feature_image">Додати зображення</label>
                         <input type="text" name="url" value="{{$photos['url']}}" id="feature_image"class="form-control" name="feature_image" value="" readonly>
