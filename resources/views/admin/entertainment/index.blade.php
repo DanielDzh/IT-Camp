@@ -54,8 +54,9 @@
                 <th style="width: 8%" class="text-center">
                     Status
                 </th>
-                <th style="width: 20%">
-                </th>
+                <!-- <th style="width: 10%">
+                    
+                </th> -->
             </tr>
         </thead>
         <tbody>
@@ -73,9 +74,9 @@
                 <td>
                     {{ $entertainment['alt_name'] }}
                 </td>
-                <td class="project_progress">
+                <!-- <td class="project_progress">
                     
-                </td>
+                </td> -->
                 <td class="project-state">
                     <span class="badge badge-success">Success</span>
                 </td>
@@ -86,6 +87,8 @@
                         </i>
                         Edit
                     </a>
+                </td>
+                <td>
                     <form action="{{route('entertainments.destroy', $entertainment['id'] )}}" method="post">
                         @csrf
                         @method('DELETE')

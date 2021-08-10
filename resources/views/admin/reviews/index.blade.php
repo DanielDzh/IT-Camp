@@ -92,9 +92,7 @@
                 <td>
                     {{ $review['alt_name'] }}
                 </td>
-                <td>
-                    {{ $review['active'] }}
-                </td>
+                
                 <td class="project_progress">
                     
                 </td>

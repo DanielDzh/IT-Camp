@@ -1,8 +1,8 @@
 
 
-window.onload = function () {
-  console.error(111);
-}
+// window.onload = function () {
+//   console.error(111);
+// }
 $(function() {
     $(window).scroll(function() {
         if($(this).scrollTop() != 0) {

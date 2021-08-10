@@ -64,25 +64,19 @@
                     <input type="text" name="alt_name" class="form-control" id="text" placeholder="Alt_name" required>
                   </div>
 
-                  <div class="form-group">
-                    <label for="exampleInputFile">Add imeges</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" name="url" class="custom-file-input" id="exampleInputFile" required>
-                        <label class="custom-file-label" for="exampleInputFile">Виберіть зображення</label>
-                      </div>
-                        
-                      <div class="input-group-append">
-                        <span class="input-group-text">Переглянути</span>
-                      </div>
-
+                   <!-- <div class="form-group">
+                        <textarea name="text" class="editor">
+                        Welcome to TinyMCE!
+                        </textarea>
+                     </div> -->
+                     <div class="form-group">
+                        <label for="feature_image">Додати зображення</label>
+                        <input type="text" name="url" id="feature_image"class="form-control" name="feature_image" value="" readonly>
+                        <img src="" alt="" class="img-uploaded" > 
+                        <a href="" class="popup_selector" data-inputid="feature_image">Select Image</a>
                     </div>
-                  </div>
-                  <div class="moreOption">
-                    <label for="exampleInputFile">Active</label>
-                    <input type="text" name="active" class="form-control" id="text" placeholder="введіть 1 або 0" required>
-                            <!-- <input class="seo" type="radio" name="active" value="Нужна seo оптимизация"/><br/> -->
-                    </div>
+                  
+                 
                   
                 </div>
                 <!-- /.card-body -->

@@ -5,7 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\EntertainmentController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Admin\ReviewController;
+use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Auth\RegisterController;
+
 
 
 /*
@@ -20,8 +22,8 @@ use App\Http\Controllers\Auth\RegisterController;
 */
 
 Route::get('/', function () {
-    //return view('camp/index');
-    return view('welcome');
+    return view('camp/index');
+    // return view('welcome');
 });
 
 Auth::routes();
@@ -38,3 +40,4 @@ Route::resource('entertainments', EntertainmentController::class);
 Route::resource('teachers', TeacherController::class);
 Route::resource('users', RegisterController::class);
 Route::resource('reviews', ReviewController::class);
+Route::resource('photos', PhotoController::class);
