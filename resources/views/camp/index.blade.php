@@ -2,7 +2,21 @@
 
 @section('content')
 <div class="content">
-            
+<div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+            @if (Route::has('login'))
+                <div class="">
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+
             <div class="content_header">
                 <div class="content_header_icon">
                     <img src="img/Group_1_1.svg" alt="">
@@ -41,6 +55,14 @@
                     <div class="block_reg_age">
                         для дітей 9-17 років
                     </div>
+                    @if (Route::has('login'))
+                    @auth
+                    @else
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="">Register</a>
+                        @endif
+                    @endauth
+                    @endif
                         <button type="button" class="block_reg_submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <!-- Button trigger modal -->
                             <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
@@ -60,29 +82,115 @@
                                       
 
                                     
-                                        
-                                        <form>
+
+
+                                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
+                        <div class="mb-3">
+                            <!-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label> -->
+                    
+                                <input placeholder = "Name" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                      
+                        </div>
+
+
+
+
+                        <div class="mb-3">
+                            <!-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Lastname') }}</label> -->
+
+                                <input placeholder = "Lastname" id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
+
+                                @error('lastname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <!-- <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label> -->
+
+                                <input placeholder = "E-Mail Address" id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
+
+
+                        <div class="mb-3">
+                            <!-- <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label> -->
+
+                                <input placeholder = "Phone" id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <!-- <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label> -->
+
+                                <input placeholder = "Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <!-- <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label> -->
+
+                                <input placeholder = "Confirm Password" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                           
+                        </div>
+                        <div class="footer_fomr">
+                        <div class="form-group row mb-0">
+                            <!-- <div class="col-md-6 offset-md-4"> -->
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                    {{ __('Register') }}
+                                </button>
+                            <!-- </div> -->
+                        </div>
+                        </div>
+                    </form>
+
+
+
+
+
+                                        <!-- <form method="POST" action="{{ route('register') }}">
+                                        @csrf
                                             <div class="mb-3">
-                                              <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+                                             
                                               <input type="email" class="form_control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                              
                                             </div>
                                             <div class="mb-3">
-                                              <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
                                               <input type="password" class="form_control" id="exampleInputPassword1">
                                             </div>
                                             <div class="mb-3">
-                                                <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
                                                 <input type="phone" class="form_control" id="exampleInputPhone1">
                                               </div>
-                                            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                                          </form>
+                                          </form> -->
 
 
                                     </div>
-                                    <div class="footer_fomr">
+                                    <!-- <div class="footer_fomr">
                                       <button type="button" class="btn btn-primary" style="width: 100%;">Зареєструватись</button>
-                                    </div>
+                                    </div> -->
                                   </div>
                                 </div>
                               </div>
@@ -337,7 +445,7 @@
                         
                         <div class="slide">
                             <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.png" alt="">
+                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                                 <div class = "kavuchka">
                                 <img src="img/“.svg" alt="">
                                 </div>
@@ -384,7 +492,7 @@
                         </div>
                         <div class="slide">
                             <div class="reviews_block_first">
-                            <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.svg" alt="">
+                            <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                             <div class = "kavuchka">
                             <img src="img/“.svg" alt="">
                             </div>
@@ -408,7 +516,7 @@
                         </div>
                         <div class="slide">
                             <div class="reviews_block_first">
-                            <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.svg" alt="">
+                            <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                             <div class = "kavuchka">
                             <img src="img/“.svg" alt="">
                             </div>
@@ -432,7 +540,7 @@
                         </div>                
                         <div class="slide">
                             <div class="reviews_block_first">
-                            <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.svg" alt="">
+                            <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                             <div class = "kavuchka">
                             <img src="img/“.svg" alt="">
                             </div>
@@ -456,7 +564,7 @@
                         </div>
                         <div class="slide">
                             <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.svg" alt="">
+                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                                 <div class = "kavuchka">
                                 <img src="img/“.svg" alt="">
                                 </div>
@@ -479,7 +587,7 @@
                         </div>
                         <div class="slide">
                             <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.svg" alt="">
+                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                                 <div class = "kavuchka">
                                 <img src="img/“.svg" alt="">
                                 </div>
@@ -502,7 +610,7 @@
                         </div>
                         <div class="slide">
                             <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.svg" alt="">
+                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                                 <div class = "kavuchka">
                                 <img src="img/“.svg" alt="">
                                 </div>
@@ -526,7 +634,7 @@
                         </div>
                         <div class="slide">
                             <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.svg" alt="">
+                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                                 <div class = "kavuchka">
                                 <img src="img/“.svg" alt="">
                                 </div>
@@ -550,7 +658,7 @@
                         </div>
                         <div class="slide">
                             <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="img/Fram.svg" alt="">
+                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                                 <div class = "kavuchka">
                                 <img src="img/“.svg" alt="">
                                 </div>

@@ -22,8 +22,8 @@ use App\Http\Controllers\Auth\RegisterController;
 */
 
 Route::get('/', function () {
-    //return view('camp/index');
-    return view('welcome');
+    return view('camp/index');
+    // return view('welcome');
 });
 
 Auth::routes();
