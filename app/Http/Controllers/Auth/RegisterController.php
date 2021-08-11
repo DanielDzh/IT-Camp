@@ -78,7 +78,7 @@ class RegisterController extends Controller
         ]);
         $user->assignRole('user');
 
-        return $user;
+        return $user->with('success', 'Новый пост успешно создан');;
        
     }
 
