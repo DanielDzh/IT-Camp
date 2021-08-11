@@ -5,7 +5,6 @@
 <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="">
-                    @auth
                         <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
@@ -13,7 +12,6 @@
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
                         @endif
-                    @endauth
                 </div>
             @endif
 
@@ -55,19 +53,11 @@
                     <div class="block_reg_age">
                         для дітей 9-17 років
                     </div>
-                    @if (Route::has('login'))
-                    @auth
-                    @else
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="">Register</a>
-                        @endif
-                    @endauth
-                    @endif
+                    @if (Route::has('register'))
                         <button type="button" class="block_reg_submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <!-- Button trigger modal -->
-                            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
-                                Зареєструватись
-                              </button>
+                           Зареєструватись
+                        </button>
+                    @endif
                               
                               <!-- Modal -->
                               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
