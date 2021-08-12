@@ -78,34 +78,13 @@ class RegisterController extends Controller
         ]);
         $user->assignRole('user');
 
-        return $user;
+        return $user->with('success', 'Новый пост успешно создан');;
        
     }
 
 
 
-    // public function index()
-    // {
-    //     $users = User::orderBy('created_at','desc')->get();
-        
-    //     return view('admin.users.index',[
-    //         'users' => $users
-    //     ]);
-    // }
-
-    // public function update(Request $request, User $user)
-    // {
-    //     $user->update($request->only(['name','lastname','profession','url', 'alt_name', 'description']));
-    //     return redirect()->back()->withSuccess('Успішно редаговано користувача: '.$user->name);
-    
-    // }
-
-    // public function destroy(User $user)
-    // {
-    //     $user->delete();
-    //     return redirect()->back()->withSuccess('Успішно видалено користувача: '.$user->name);
-    
-    // }
+   
 
     
 }

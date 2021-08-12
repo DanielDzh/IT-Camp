@@ -114,6 +114,44 @@
           </li>
 
 
+          <li class="nav-item">
+            <a href="" class="nav-link">
+            <i class="nav-icon fas fa-child"></i>
+             
+              <p>
+                Зареєстровані
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('registereds.index')}}" class="nav-link ">
+                  
+                  <p>Всі зареєстровані</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index2.html" class="nav-link">
+                  
+                  <p>Додати </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index3.html" class="nav-link">
+                  
+                  <p>Редагувати </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index3.html" class="nav-link">
+                  
+                  <p>Видалити </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
 
 
           <li class="nav-item">

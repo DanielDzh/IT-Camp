@@ -26,7 +26,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <!-- <a class="navbar-brand" style = "margin-left: 30px; color: grey;" href="http://localhost:8000/admin_panel">
+                <!-- <a class="navbar-brand" style = "margin-left: 30px; color: grey;" href="http://127.0.0.1:8000/admin_panel">
                     Admin_panel
                 </a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -61,7 +61,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="http://localhost:8000/admin_panel">
+                                <a class="dropdown-item" href="http://127.0.0.1:8000/admin_panel">
                                         Admin_panel
                                     </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"

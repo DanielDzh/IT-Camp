@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title','Відгуки')
+@section('title','Зареєстровані на табір')
 
 @section('content')
 <!-- Content Header (Page header) -->
@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Відгуки</h1>
+            <h1 class="m-0">Зареєстровані на табір</h1>
           </div><!-- /.col -->
           @if (session('success'))
                 <div class="alert alert-success" role="alert">
@@ -48,63 +48,51 @@
                     Lastname
                 </th>
                 
-                <th style="width: 20%">
-                    Description
+                <th style="width: 8%" class="text-center">
+                    Email
                 </th>
-                <th>
-                    Publishdate
+                <th style="width: 8%" class="text-center">
+                    Phone
                 </th>
-                <th style="width: 20%">
-                    Imeges
-                </th>
-                <th>
-                    Alt_name
-                </th>
-
                 <th style="width: 8%" class="text-center">
                     Status
                 </th>
             </tr>
         </thead>
         <tbody>
-            @foreach($reviews as $review )
+            @foreach($registereds as $registered )
             <tr>
                 <td>
-                    {{ $review['id'] }}
+                    {{ $registered['id'] }}
                 </td>
                 <td>
-                    {{ $review['name'] }}
+                    {{ $registered['name'] }}
                 </td>
                 <td>
-                    {{ $review['lastname'] }}
+                    {{ $registered['lastname'] }}
                 </td>
                 <td>
-                    {{ $review['description'] }}
+                    {{ $registered['email'] }}
                 </td>
                 <td>
-                    {{ $review['publishdate'] }}
+                    {{ $registered['phone'] }}
                 </td>
-                <td>
-                    {{ $review['url'] }}
-                </td>
-                <td>
-                    {{ $review['alt_name'] }}
-                </td>
-                
                 <!-- <td class="project_progress">
                     
                 </td> -->
-                
+                <td class="project-state">
+                    <span class="badge badge-success">Success</span>
+                </td>
                 <td class="project-actions text-right">
                     
-                    <a class="btn btn-info btn-sm" href="{{route('reviews.edit', $review['id'] )}}">
+                    <a class="btn btn-info btn-sm" href="{{route('registereds.edit', $registered['id'] )}}">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Edit
                     </a>
                 </td>
                 <td>
-                <form action="{{route('reviews.destroy', $review['id'] )}}" method="post">
+                <form action="{{route('registereds.destroy', $registered['id'] )}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >

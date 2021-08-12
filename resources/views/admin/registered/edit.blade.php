@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
         <div class="col-sm-6">
-            <h1 class="m-0">Edit users :{{$users['name']}}</h1>
+            <h1 class="m-0">Edit registereds :{{$registereds['name']}}</h1>
           </div><!-- /.col -->
            
 
@@ -33,29 +33,29 @@
               
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{route('users.update', $users['id'])}}" method="post">
+              <form action="{{route('registereds.update', $registereds['id'])}}" method="post">
                   @csrf
                   @method('PUT')
                 <div class="card-body">
 
                  <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <input type="text" value="{{$users['name']}}" name="name" class="form-control" id="text" placeholder="Name" required>
+                    <input type="text" value="{{$registereds['name']}}" name="name" class="form-control" id="text" placeholder="Name" required>
                   </div>
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Lastname</label>
-                    <input type="text" value="{{$users['lastname']}}" name="lastname" class="form-control" id="text" placeholder="Lastname" required>
+                    <input type="text" value="{{$registereds['lastname']}}" name="lastname" class="form-control" id="text" placeholder="Lastname" required>
                   </div>
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="text" value="{{$users['email']}}" name="profession" class="form-control" id="text" placeholder="Profession" required>
+                    <input type="text" value="{{$registereds['email']}}" name="profession" class="form-control" id="text" placeholder="Profession" required>
                   </div>
 
                   <div class="form-group">
                     <label for="exampleInputEmail1">Phone</label>
-                    <input type="text" value="{{$users['phone']}}" name="description" class="form-control" id="text" placeholder="Description" required>
+                    <input type="text" value="{{$registereds['phone']}}" name="description" class="form-control" id="text" placeholder="Description" required>
                   </div>
                   
                   
@@ -74,9 +74,9 @@
     </section>
     <!-- /.content -->
     <div class="row">
-            <a href="{{route('users.index')}}" class="nav-link ">
+            <a href="{{route('registereds.index')}}" class="nav-link ">
                     <div class="card-footer">
-                    <button type="" class="btn btn-primary">Всі користувачі</button>
+                    <button type="" class="btn btn-primary">Всі заєстровані </button>
                     </div>
                 </a>
           </div>

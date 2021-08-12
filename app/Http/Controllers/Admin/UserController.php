@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Photo;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class PhotoController extends Controller
+
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +16,11 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        $photos = Photo::orderBy('created_at','desc')->get();
-        
-        return view('admin.photo.index',[
-            'photos' => $photos
-        ]);
+        $users = User::orderBy('created_at','desc')->get();
+    
+    return view('admin.users.index',[
+        'users' => $users
+    ]);
     }
 
     /**
@@ -29,7 +30,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        return view('admin.photo.create');
+        //
     }
 
     /**
@@ -40,17 +41,16 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        Photo::create($request->only(['url', 'alt_name']));
-        return redirect()->back()->withSuccess('Нову картинку додано успішно');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Photo  $photo
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Photo $photo)
+    public function show(User $user)
     {
         //
     }
@@ -58,13 +58,13 @@ class PhotoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Photo  $photo
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Photo $photo)
+    public function edit(User $user)
     {
-        return view('admin.photo.edit',[
-            'photos' => $photo
+        return view('admin.users.edit',[
+            'users' => $user
 
         ]);
     }
@@ -73,24 +73,24 @@ class PhotoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Photo  $photo
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Photo $photo)
+    public function update(Request $request, User $user)
     {
-        $photo->update($request->only(['url', 'alt_name']));
-        return redirect()->back()->withSuccess('Успішно редаговано картинку: '.$photo->alt_name);
+        $user->update($request->only(['name','lastname','profession','url', 'alt_name', 'description']));
+    return redirect()->back()->withSuccess('Успішно редаговано користувача: '.$user->name);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Photo  $photo
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Photo $photo)
+    public function destroy(User $user)
     {
-        $photo->delete();
-        return redirect()->back()->withSuccess('Успішно видалено картинку: '.$photo->alt_name);
+        $user->delete();
+    return redirect()->back()->withSuccess('Успішно видалено користувача: '.$user->name);
     }
 }
