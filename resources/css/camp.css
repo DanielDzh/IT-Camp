@@ -264,16 +264,16 @@
     color: #3BA1FF;
 }
 .photo{
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 30px;
 }
-.photo div{
+/* .photo div{
     display: flex;
     flex-direction: column;
-}
+} */
 .first_column img, .third_column img{
     margin-bottom: 20px;
 }
@@ -568,4 +568,82 @@
     }
     .btn-close {
         align-self: flex-start;
+    }
+
+
+    .popup{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.8s ease 0s;
+    }
+    .popup.open{
+        opacity: 1;
+        visibility: visible;
+    }
+    .popup.open .popup_content{
+        transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        opacity: 1;
+    }
+    .popup_body{
+        min-height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 30px 10px;
+        margin-top: 17%;
+    }
+    .popup_content{
+        color: black;
+        max-width: 800px;
+        padding-right: 15px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .popup_content a{
+        margin-bottom: 7px;
+    }
+    .popup_close{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 20px;
+        color:black;
+        text-decoration: none;
+    }
+
+    @media (min-width: 767px){
+        .gallery_item_big{
+            /* grid-column: span 2; */
+            grid-row: span 2;
+        }
+    }
+    .gallery_item img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* filter: grayscale(100%);  */
+    }
+    
+    .gray{
+        filter: grayscale(100%); 
+    }
+
+    .gallery_items{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .gallery_item{
+        position: relative;
+        padding: 0px 0px 85% 0px;
     }

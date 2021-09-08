@@ -64,8 +64,6 @@
                 <th style="width: 8%" class="text-center">
                     Status
                 </th>
-                <th style="width: 20%">
-                </th>
             </tr>
         </thead>
         <tbody>
@@ -93,9 +91,9 @@
                     {{ $review['alt_name'] }}
                 </td>
                 
-                <td class="project_progress">
+                <!-- <td class="project_progress">
                     
-                </td>
+                </td> -->
                 
                 <td class="project-actions text-right">
                     
@@ -104,7 +102,9 @@
                         </i>
                         Edit
                     </a>
-                    <form action="{{route('reviews.destroy', $review['id'] )}}" method="post">
+                </td>
+                <td>
+                <form action="{{route('reviews.destroy', $review['id'] )}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >
@@ -114,7 +114,6 @@
                         </button>
 
                     </form>
-                    
                 </td>
             </tr>
 

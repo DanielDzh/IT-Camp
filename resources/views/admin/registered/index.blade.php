@@ -57,8 +57,6 @@
                 <th style="width: 8%" class="text-center">
                     Status
                 </th>
-                <th style="width: 20%">
-                </th>
             </tr>
         </thead>
         <tbody>
@@ -79,9 +77,9 @@
                 <td>
                     {{ $registered['phone'] }}
                 </td>
-                <td class="project_progress">
+                <!-- <td class="project_progress">
                     
-                </td>
+                </td> -->
                 <td class="project-state">
                     <span class="badge badge-success">Success</span>
                 </td>
@@ -92,7 +90,9 @@
                         </i>
                         Edit
                     </a>
-                    <form action="{{route('registereds.destroy', $registered['id'] )}}" method="post">
+                </td>
+                <td>
+                <form action="{{route('registereds.destroy', $registered['id'] )}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >
@@ -102,7 +102,6 @@
                         </button>
 
                     </form>
-                    
                 </td>
             </tr>
 

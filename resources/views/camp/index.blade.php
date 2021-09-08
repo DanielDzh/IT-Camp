@@ -2,8 +2,9 @@
 
 @section('content')
 <div class="content">
-<div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
+<!-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"> -->
+            
+                @if (Route::has('login'))
                 <div class="">
                     @auth
                         <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
@@ -15,39 +16,41 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+                 @endif
 
             <div class="content_header">
                 <div class="content_header_icon">
                     <img src="img/Group_1_1.svg" alt="">
                 </div>
-                <a class = "sulka" href="javascript://0" onclick = "SlowScroll('.block_awaits_you')">
+                <a class = "sulka" href="javascript://0">
                     <div class="for_us" >
                         Про нас
                     </div>
                 </a>
-                <a class = "sulka" href="javascript://0" onclick = "SlowScroll('.Enter')">
+                <a class = "sulka" href="javascript://0">
                     <div class="programm">
                         Програма
                     </div>
                 </a>
-                <a class = "sulka" href="javascript://0" onclick = "SlowScroll('.teachers')">
+                <a class = "sulka" href="javascript://0">
                     <div class="teacher">
                         Викладачі
                     </div>
                 </a>
-                <a class = "sulka" href="javascript://0" onclick = "SlowScroll('.galery')">
+                <a class = "sulka" href="javascript://0">
                     <div class="gallery">
                         Галерея
                     </div>
                 </a>
-                <a class = "sulka" href="javascript://0" onclick = "SlowScroll('.reviews')">
+                <a class = "sulka" href="javascript://0">
                     <div class="vidg">
                         Відгуки
                     </div>
                 </a>
             </div>
+            
             <div class = "block_reg">
+
                 <div class="block_reg_content">
                     <div class="block_reg_ITCamp">
                         IT Camp
@@ -55,28 +58,11 @@
                     <div class="block_reg_age">
                         для дітей 9-17 років
                     </div>
-                    @if (Route::has('login'))
-                    @auth
-                    @else
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="">Register</a>
-                        @endif
-                    @endauth
-                    @endif
+                    @if (Route::has('register'))
                         <button type="button" class="block_reg_submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <!-- Button trigger modal -->
-                            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
-                                Зареєструватись
-                              </button>
-                              @if ($message = Session::get('success'))
-        <div class="alert alert-success alert-dismissible mt-4" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Закрыть">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            {{ $message }}
-        </div>
-    @endif
-                              
+                            Зареєструватись
+                        </button>
+                    @endif
                               <!-- Modal -->
                               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -158,26 +144,6 @@
                         </div>
                     </form>
 
-
-
-
-
-                                        <!-- <form method="POST" action="{{ route('register') }}">
-                                        @csrf
-                                            <div class="mb-3">
-                                             
-                                              <input type="email" class="form_control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                              
-                                            </div>
-                                            <div class="mb-3">
-                                              <input type="password" class="form_control" id="exampleInputPassword1">
-                                            </div>
-                                            <div class="mb-3">
-                                                <input type="phone" class="form_control" id="exampleInputPhone1">
-                                              </div>
-                                          </form> -->
-
-
                                     </div>
                                     <!-- <div class="footer_fomr">
                                       <button type="button" class="btn btn-primary" style="width: 100%;">Зареєструватись</button>
@@ -194,22 +160,22 @@
                 <div class="block_awaits_you_text">
                     Що вас очікує
                 </div>
-                <div class="first_line">
-                    <div class="first_line_one">
+                <div class="line">
+                    <div class="awaits_you">
                         <img src="img/notebook_1.png" alt="">
                         
                         <div>
                             Продуктивне навчання від викладачів-практиків
                         </div>
                     </div>
-                    <div class="first_line_two">
+                    <div class="awaits_you">
                         <img src="img/web-site_1.png" alt="">
                         <div>
                             Створення власного сайту та розробка логотипу
                         </div>
                         
                     </div>
-                    <div class="first_line_tree">
+                    <div class="awaits_you">
                         <img src="img/linguistics_1.png" alt="">
                         <div>
                             Покращення знань 
@@ -217,9 +183,9 @@
                         </div>
                         
                     </div>
-                </div>
-                <div class="second_line">
-                    <div class="second_line_one">
+                <!-- </div> -->
+                <!-- <div class="second_line"> -->
+                    <div class="awaits_you">
                         <img src="img/hand_1.png" alt="">
                         <div>
                             Вивчення технік
@@ -227,7 +193,7 @@
                         </div>
                         
                     </div>
-                    <div class="second_line_two">
+                    <div class="awaits_you">
                         <img src="img/running_1.png" alt="">
                         <div>
                             Заняття спортом з
@@ -235,7 +201,7 @@
                         </div>
                         
                     </div>
-                    <div class="second_line_tree">
+                    <div class="awaits_you">
                         <img src="img/motivation_1.png" alt="">
                         <div>
                             Мотивація та заохочення школярів
@@ -246,42 +212,48 @@
             </div>
             <div id = "block" class="block_content">
                 <div class = "haos">
+                <div class = "haos_text_IT_adaptive">
+                            <span class = "span_1">ІТ Camp — </span>
+                            <span class = "span_2">простір для здорового  
+                                розвитку і самореалізації дітей</span>
+                        </div>
                     <img src="img/Rectangle (1).svg" alt="">
                     <div class="haos_text">
+
                         <div class = "haos_text_IT">
                             <span style="font-weight: bold; font-size: 64px; color: #3BA1FF">ІТ Camp — </span>
                             <span style="font-size: 36px">простір для здорового  
                                 розвитку і самореалізації дітей</span>
                         </div>
-                        <div style="font-weight: bold; font-size: 36px; color: #8AA5FC">
+                        <div class = "haos_text_IT_two">
                             Вже після проходження 4-тижневого 
                             інтенсивного курсу учасники табору зможуть:
                         </div>
                         <div class = "haos_text_creatSite_1">
-                            <div style="background: url(img/Rectangle\ 75.svg) center no-repeat; padding: 30px 100px">створити свій власний сайт;</div>
+                            <div class = "Hacuna" style="background: url(img/Rectangle\ 75.svg) center no-repeat; padding: 15px 30px;">створити свій власний сайт;</div>
                             <div></div>
                         </div>
                         <div class = "haos_text_creatSite_2">
                             <div><img src="img/Rectangle.svg" alt=""></div>
-                           <div style="background: url(img/Rectangle\ 79.svg) center no-repeat; padding: 30px 100px"> дізнатися про особливості<br>
+                           <div class = "Hacuna" style="background: url(img/Rectangle\ 79.svg) center no-repeat; padding: 15px 5px;"> дізнатися про особливості<br>
                             сучасного веб-дизайну; 
                             </div>
                             
                         </div>
                         <div class = "haos_text_creatSite_3">
-                           <div style="background: url(img/Rectangle\ 77.svg) center no-repeat; padding: 30px 100px">покращити знання з <br>
+                           <div class = "Hacuna" style="background: url(img/Rectangle\ 77.svg) center no-repeat; padding: 15px 30px;">покращити знання з <br>
                             англійської  мови для ІТ
                             </div> 
                             <div><img src="img/Frame (1).svg" alt=""></div>
                         </div>
                         <div class = "haos_text_creatSite_4">
                             <div></div>
-                            <div style="background: url(img/Rectangle\ 78.svg) center no-repeat; padding: 30px 100px">Розвинути логічне мислення</div> 
+                            <div class = "Hacuna" style="background: url(img/Rectangle\ 78.svg) center no-repeat; padding: 15px 30px;">Розвинути логічне мислення</div> 
                             
                         </div>
                     </div>
                 </div>
-                <div style="font-weight: bold; font-size: 35px; color: #3BA1FF; text-align: center; margin-top: 15px">
+                <div class = "practical_tasks">
                     Лише практичні заняття, цікаві ігри та заняття спортом!
                 </div>
             </div>
@@ -315,12 +287,16 @@
                 <div class = "Enter_first_line">
 
                     <!-- <div class = "acq">
+                <div class = "Enter_line">
+                    <div>
                         <img src="img/Frame (2).svg" alt="">
                         <span>Знайомство<br>
                             (ігри та творчі завдання)
                         </span>
                     </div> -->
                     <!-- <div class = "Capture">
+                    </div>
+                    <div>
                         <img src="img/Frame (3).svg" alt="">
                         <span>Capture the flag<br>
                             (командні ігри на природі)
@@ -330,6 +306,8 @@
 
                 <div class = "Enter_second_line">
                     <!-- <div class = "Puzzle_me">
+                    </div>
+                    <div>
                         <img src="img/Frame (4).svg" alt="">
                         <span>Квест<br>
                             “Puzzle me”
@@ -358,7 +336,7 @@
                     Викладачі
                 </div>
 
-                <div class="teachers_iniz">
+                <!-- <div class="teachers_iniz">
                 @foreach($teachers as $teacher )
 
         <div class="Troxumchuk">
@@ -377,11 +355,230 @@
             </div>
 
 
-        @endforeach
+        @endforeach -->
    
 
 
                     
+                <div id="carousel" class="carousel">
+                    <button class="arrow prev"></button>   
+                    <div class="gallery_teachers">
+                    <ul class="images heigth">
+                        <div>
+                        <li class = "lili">
+                        @foreach($teachers as $teacher )
+                            <div class="teach">
+                            <div>
+                                <img src="{{ $teacher['url'] }}" alt="">
+                            </div>
+                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                            {{ $teacher['name'] }}  {{ $teacher['lastname'] }}
+                            </div>
+                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                            {{ $teacher['profession'] }} 
+                            </div>
+                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                            {{ $teacher['description'] }} 
+                            </div>
+                            </div>
+                            @endforeach
+                        </li>
+                        </div>
+                        <div>
+                        <li class = "lili">
+
+                            <div class="teach">
+                            <div>
+                                <img src="img/1 (1).svg" alt="">
+                            </div>
+                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                                Ольга Трохимчук
+                            </div>
+                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                                Логіка
+                            </div>
+                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
+                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
+                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
+                            </div>
+                            </div>
+                        </li>
+                        </div>
+                        <div>
+                        <li class = "lili">
+
+                            <div class="teach">
+                            <div>
+                                <img src="img/1 (1).svg" alt="">
+                            </div>
+                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                                Ольга Трохимчук
+                            </div>
+                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                                Логіка
+                            </div>
+                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
+                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
+                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
+                            </div>
+                            </div>
+                        </li>
+                        </div>
+                        <div>
+                        <li class = "lili">
+
+                            <div class="teach">
+                            <div>
+                                <img src="img/1 (1).svg" alt="">
+                            </div>
+                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                                Ольга Трохимчук
+                            </div>
+                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                                Логіка
+                            </div>
+                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
+                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
+                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
+                            </div>
+                            </div>
+                        </li>
+                        </div>
+                        <div>
+                        <li class = "lili">
+
+                            <div class="teach">
+                            <div>
+                                <img src="img/1 (1).svg" alt="">
+                            </div>
+                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                                Ольга Трохимчук
+                            </div>
+                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                                Логіка
+                            </div>
+                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
+                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
+                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
+                            </div>
+                            </div>
+                        </li>
+                        </div>
+                        <div>
+                        <li class = "lili">
+
+                            <div class="teach">
+                            <div>
+                                <img src="img/1 (1).svg" alt="">
+                            </div>
+                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                                Ольга Трохимчук
+                            </div>
+                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                                Логіка
+                            </div>
+                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
+                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
+                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
+                            </div>
+                            </div>
+                        </li>
+                        </div>
+                        <div>
+                        <li class = "lili">
+
+                            <div class="teach">
+                            <div>
+                                <img src="img/1 (1).svg" alt="">
+                            </div>
+                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                                Ольга Трохимчук
+                            </div>
+                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                                Логіка
+                            </div>
+                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
+                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
+                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
+                            </div>
+                            </div>
+                        </li>
+                        </div>
+                        <div>
+                        <li class = "lili">
+
+                            <div class="teach">
+                            <div>
+                                <img src="img/1 (1).svg" alt="">
+                            </div>
+                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                                Ольга Трохимчук
+                            </div>
+                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                                Логіка
+                            </div>
+                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
+                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
+                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
+                            </div>
+                            </div>
+                        </li>
+                        </div>
+                        <div>
+                        <li class = "lili">
+
+                            <div class="teach">
+                            <div>
+                                <img src="img/1 (1).svg" alt="">
+                            </div>
+                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                                Ольга Трохимчук
+                            </div>
+                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                                Логіка
+                            </div>
+                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
+                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
+                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
+                            </div>
+                            </div>
+                        </li>
+                        </div>
+                        <div>
+                        <li class = "lili">
+
+                            <div class="teach">
+                            <div>
+                                <img src="img/1 (1).svg" alt="">
+                            </div>
+                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                                Ольга Трохимчук
+                            </div>
+                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                                Логіка
+                            </div>
+                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
+                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
+                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
+                            </div>
+                            </div>
+                        </li>
+                        </div>
+                        <!-- <li><img class="img" src="https://ru.js.cx/carousel/10.png"></li>
+                        <li><img class="img" src="https://ru.js.cx/carousel/5.png"></li>
+                        <li><img class="img" src="https://ru.js.cx/carousel/6.png"></li> -->
+                    </ul>
+                    </div>
+                    <button class="arrow next"></button>
                 </div>
             </div>
             <div class="galery">
@@ -389,24 +586,54 @@
                     Галерея IT табору
                 </div>
                 <div class="photo">
-                    <div class="first_column">
-                        <img src="img/photo_1.svg" class="minimized" alt="клик для увеличения">
-                        <img src="img/19477294_1946391575600829_6258206423574036472_o 1.svg"  class="minimized" alt="клик для увеличения">
-                        <img src="img/19466421_1946391262267527_1114287526017256070_o 1.svg"  class="minimized" alt="клик для увеличения">
+                    <div class="gallery_items">
+                        <div class="gallery_item gray">
+                            <img src="img/Frame 8.png" alt="клик для увеличения">
+                        </div>
+                        <div class="gallery_item gray">
+                            <img src="img/Frame 9.png" alt="клик для увеличения">
+                        </div>
+                        <div class="gallery_item gray">
+                            <img src="img/Frame 15.png" alt="клик для увеличения">
+                        </div>
+                        <div class="gallery_item gray">
+                            <img src="img/Frame 12.png" alt="клик для увеличения">
+                        </div>
+                        <div class="gallery_item gray">
+                            <img src="img/Frame 10.png" alt="клик для увеличения">
+                        </div>
+                        <div class="gallery_item gray">
+                            <img src="img/Frame 7.png" alt="клик для увеличения">
+                        </div>
+                        <div class="gallery_item gray">
+                            <img src="img/Frame 11.png" alt="клик для увеличения">
+                        </div>
+                        <div class="gallery_item gray">
+                            <img src="img/Frame 14.png" alt="клик для увеличения">
+                        </div>
+                        <div class="gallery_item gray">
+                            <img src = "img/Frame 401.png" alt="клик для увеличения">
+                        </div>
+                        <div class="gallery_item gray">
+                            <img src="img/Frame 13.png" alt="клик для увеличения">
+                        </div>
+                        <!-- <div class="gallery_item gray">
+                            <img src="img/Frame 411.png" alt="клик для увеличения">
+                        </div> -->
                     </div>
-                    <div class="second_column">
-                        <img src="img/19488882_1946391115600875_7131555583729776851_o 1.svg"  class="minimized" alt="клик для увеличения">
-                        <img src="img/67256239_3048815508691758_9023575329385480192_n 1.svg"  class="minimized" alt="клик для увеличения">
-                        <img src="img/67109154_3047712295468746_1315304305284087808_n 1.svg"  class="minimized" alt="клик для увеличения">
-                    </div>
-                    <div class="third_column">
-                        <img src="img/67243781_3041990022707640_7981304221116923904_n 1.svg"  class="minimized" alt="клик для увеличения">
-                        <img src="img/67187357_3048817388691570_1381167834926678016_n 1.svg"  class="minimized" alt="клик для увеличения">
-                    </div>
-                    <div class="four_column">
-                        <img src = "img/66330348_3030069857232990_6888324005942525952_n 1.svg"  class="minimized" alt="клик для увеличения">
-                        <img src="img/66815275_3040748242831818_671679077744115712_n 1.svg"  class="minimized" alt="клик для увеличения">
-                        <img src="img/19466501_1946391555600831_7029760963208071130_o 1.svg"  class="minimized" alt="клик для увеличения">
+                </div>
+
+                <div id = "popup" class = "popup">
+                    <div class="popup_body">
+                        <div id = "popup_content" class="popup_content">
+                            <!-- <a href="" class="popup_close close-popup">X</a> -->
+                            <!-- <a href="https://www.instagram.com/intitaedu/"><img src="img/instagram (3) 1.svg" alt=""></a>
+                            <a href="https://t.me/IT_Academy_Vinnytsia"><img src="img/telegram (2) 1.svg" alt=""></a>
+                            <a href="https://www.facebook.com/intita.it"><img src="img/facebook 3.svg" alt=""></a>
+                            <a href="https://www.youtube.com/c/ITAcademyVinnytsia"><img src="img/youtube 3.svg" alt=""></a> -->
+                            <!-- <a href="https://twitter.com/INTITA_EDU"><img src="img/twitter (1) 3.svg" alt=""></a>  -->
+                            <!-- <a href="viber://chat?number=+380631892256"><img src="img/viber 3.svg" alt=""></a>                        -->
+                        </div>
                     </div>
                 </div>
             </div>
