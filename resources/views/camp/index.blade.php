@@ -284,39 +284,14 @@
                 <div class = "Rozvagu">
                 Розваги
                 </div>
-                <div class = "Enter_first_line">
-
-                    <!-- <div class = "acq">
+               
                 <div class = "Enter_line">
-                    <div>
-                        <img src="img/Frame (2).svg" alt="">
-                        <span>Знайомство<br>
-                            (ігри та творчі завдання)
-                        </span>
-                    </div> -->
-                    <!-- <div class = "Capture">
-                    </div>
-                    <div>
-                        <img src="img/Frame (3).svg" alt="">
-                        <span>Capture the flag<br>
-                            (командні ігри на природі)
-                        </span>
-                    </div> -->
-                </div>
-
-                <div class = "Enter_second_line">
-                    <!-- <div class = "Puzzle_me">
-                    </div>
-                    <div>
-                        <img src="img/Frame (4).svg" alt="">
-                        <span>Квест<br>
-                            “Puzzle me”
-                        </span>
-                    </div>  -->
+            
+                    
                     @foreach($entertaiments as $entertaiment )
 
-
-                    <div class = "visiting">
+                    
+                    <div>
                         
                         <img src="{{ $entertaiment['url'] }}" alt="">
                         <span>{{ $entertaiment['description'] }}<br>
@@ -326,8 +301,8 @@
 
 
                 @endforeach
-                    
-                </div>
+</div>
+                
             </div>
             <div class="teachers">
 
