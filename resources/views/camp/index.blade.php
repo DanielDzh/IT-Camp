@@ -313,33 +313,42 @@
                 Розваги
                 </div>
                 <div class = "Enter_first_line">
-                    <div class = "acq">
+
+                    <!-- <div class = "acq">
                         <img src="img/Frame (2).svg" alt="">
                         <span>Знайомство<br>
                             (ігри та творчі завдання)
                         </span>
-                    </div>
-                    <div class = "Capture">
+                    </div> -->
+                    <!-- <div class = "Capture">
                         <img src="img/Frame (3).svg" alt="">
                         <span>Capture the flag<br>
                             (командні ігри на природі)
                         </span>
-                    </div>
+                    </div> -->
                 </div>
+
                 <div class = "Enter_second_line">
-                    <div class = "Puzzle_me">
+                    <!-- <div class = "Puzzle_me">
                         <img src="img/Frame (4).svg" alt="">
                         <span>Квест<br>
                             “Puzzle me”
                         </span>
-                    </div>
+                    </div>  -->
+                    @foreach($entertaiments as $entertaiment )
+
+
                     <div class = "visiting">
-                        <img style = "position: absolute; left: -15%;" src="img/Rectangle (4).svg" alt="">
-                        <img src="img/Frame (5).svg" alt="">
-                        <span>Відвідування<br>
-                            ІТ компаній
+                        
+                        <img src="{{ $entertaiment['url'] }}" alt="">
+                        <span>{{ $entertaiment['description'] }}<br>
+                            
                         </span>
                     </div>
+
+
+                @endforeach
+                    
                 </div>
             </div>
             <div class="teachers">
@@ -348,55 +357,31 @@
                 <div class="teachers_text">
                     Викладачі
                 </div>
+
                 <div class="teachers_iniz">
-                    <div class="Troxumchuk">
-                        <div>
-                            <img src="img/1 (1).svg" alt="">
-                        </div>
-                        <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                            Ольга Трохимчук
-                        </div>
-                        <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                            Логіка
-                        </div>
-                        <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                            Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
-                            Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                            Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
-                        </div>
-                    </div>
-                    <div class="Chubatuk">
-                        <div>
-                            <img src="img/1.svg" alt="">
-                        </div>
-                        <div style="font-weight: bold; font-size: 30px; line-height: 140.4%; text-align: center; color: #0D3C61; padding: 20px 0px;">
-                            Володимир Чубатюк
-                        </div>
-                        <div style="font-weight: 600; font-size: 20px; line-height: 140.4%; text-align: center; color: #0D3C61; padding-bottom: 20px;">
-                            WEB-дизайнер
-                        </div>
-                        <div style="font-weight: 600; font-size: 18px; line-height: 22px; color: #2D5772; text-align: start;">
-                            В своїй викладацькій роботі роблю наголос на практичні знання. 
-                            Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                            Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні .
-                        </div>
-                    </div>
-                    <div class="Dolgiy">
-                        <div>
-                            <img src="img/1 (2).svg" alt="">
-                        </div>
-                        <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                            Євген Долгій
-                        </div>
-                        <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                            Веб програмування
-                        </div>
-                        <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                            Будь-який програміст - це в першу чергу мислитель. 
-                            Тому, вважаю, що знання логіки і вміння мислити нестандартно допоможуть 
-                            нашим майбутнім айтішникам легко освоїти професію.
-                        </div>
-                    </div>
+                @foreach($teachers as $teacher )
+
+        <div class="Troxumchuk">
+                <div>
+                    <img src="{{ $teacher['url'] }}" alt="">
+                </div>
+                <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                    {{ $teacher['name'] }}  {{ $teacher['lastname'] }}
+                </div>
+                <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                    {{ $teacher['profession'] }} 
+                </div>
+                <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                    {{ $teacher['description'] }} 
+                </div>
+            </div>
+
+
+        @endforeach
+   
+
+
+                    
                 </div>
             </div>
             <div class="galery">
@@ -433,243 +418,35 @@
                 
                 <div class="reviews_block">
                     <div style = "margin: 50px;" class="rev_slider">
-                        
-                        <div class="slide">
-                            <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
-                                <div class = "kavuchka">
-                                <img src="img/“.svg" alt="">
-                                </div>
-                                <div class="reviews_block_first_img">
-                                    <img src="img/boy 1.svg" alt="">
-                                </div>
-                                <div class = "Balats">
-                                    Балацир Андрій
-                                </div>
-                                <div class = "reviews_block_first_text">
-                                    У Вінницькій ІТ Академії я навчаюсь вже півтора року і можу сміливо сказати, 
-                                    що на парах все пояснюється легко та доступно.
-                                    Без проблем можна запитати щось у викладача і запитати те,що не зрозумів або дізнатись нове.
-                                    Це найкраша школа у Вінниці і чудовий вибір для початкових програмістів будь-якого віку.
-                                </div>
-                                <div class = "reviews_block_first_date">
-                                    18.02.2018
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            
-                        <div class="reviews_block_second">
-                            <div class = "kavuchka">
-                            <img src="img/“.svg" alt="">
-                            </div>
-                            <div class="reviews_block_second_img">
-                                <img src="img/boy 2.svg" alt="">
-                            </div>
-                            <div class = "Chioma">
-                                Чіома Еста
-                            </div>
-                            <div class = "reviews_block_second_text">
-                                Навчаючись у Вінницькій ІТ-Академії більше двоx років можу впевнено сказати, 
-                                що це найкращий навчальний заклад для майбутніх програмістів. 
-                                Короткий термін навчання, якісні та доступні кожному уроки, 
-                                практичні заняття дозволяють розуміти та виконувати складні і не дуже проекти. 
-                                Інтерактивні зяняття мотивують і допомогають краще засвоїти матеріал.
-                            </div>
-                            <div class = "reviews_block_first_date">
-                                25.05.2019
-                            </div>
-                        </div>
-                        </div>
-                        <div class="slide">
-                            <div class="reviews_block_first">
-                            <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
-                            <div class = "kavuchka">
-                            <img src="img/“.svg" alt="">
-                            </div>
-                            <div class="reviews_block_first_img">
-                                <img src="img/boy 1.svg" alt="">
-                            </div>
-                            <div class = "Balats">
-                                Касанов Павло
-                            </div>
-                            <div class = "reviews_block_first_text">    
-                                 навчаюсь в ІТ-Академії, яка знаходиться в м. Вінниця, майже 2 роки. 
-                                 Мені дуже подобається вчитися в цій Академії. Тут працюють дуже цікаві і творчі люди. 
-                                 Пари у них проходять дуже весело і пізнавально. 
-                                 Я завжди приходжу додому з гарним настроєм та та новими знаннями. 
-                                 І вам я раджу завітати до нашої ІТ-Академії.
-                            </div>
-                            <div class = "reviews_block_first_date">
-                                13.04.2014
-                            </div>
-                        </div>
-                        </div>
-                        <div class="slide">
-                            <div class="reviews_block_first">
-                            <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
-                            <div class = "kavuchka">
-                            <img src="img/“.svg" alt="">
-                            </div>
-                            <div class="reviews_block_first_img">
-                                <img src="img/boy 1.svg" alt="">
-                            </div>
-                            <div class = "Balats">
-                                Довгий Данило
-                            </div>
-                            <div class = "reviews_block_first_text">
-                                В ІТ-Академії добре навчають.Навіть дають все для гарного та комфортного навчання. 
-                                Ноутбуки, зарядки, мишки, релаксрум, кухня... Мені подобаються всі вчителі та всі пари. 
-                                Вчителі гарно навчають та допомогають тим, в кого не дуже виходить. 
-                                Поки що Академія невелика, тому майже всі знають один одного і навіть якщо ти новенький, 
-                                то через декілька днів ти будеш розмовляти майже зі всіма.
-                            </div>
-                            <div class = "reviews_block_first_date">
-                                18.02.2018
-                            </div>
-                        </div>
-                        </div>                
-                        <div class="slide">
-                            <div class="reviews_block_first">
-                            <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
-                            <div class = "kavuchka">
-                            <img src="img/“.svg" alt="">
-                            </div>
-                            <div class="reviews_block_first_img">
-                                <img src="img/boy 1.svg" alt="">
-                            </div>
-                            <div class = "Balats">
-                                Чорний Констянтин
-                            </div>
-                            <div class = "reviews_block_first_text">
-                                Я вже рік займаюсь в ІТ-академії.
-                                Мені подобається:
-                                Викладачі, які добре пояснюють матеріал;
-                                Учні, які можуть допомогти коли я цього потребую;
-                                Техніка, яка дає нам можливість не витрачати кошти на ноутбуки, мишки і т.д;
-                            </div>
-                            <div class = "reviews_block_first_date">
-                                18.02.2018
-                            </div>
-                        </div>
-                        </div>
-                        <div class="slide">
-                            <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
-                                <div class = "kavuchka">
-                                <img src="img/“.svg" alt="">
-                                </div>
-                                <div class="reviews_block_first_img">
-                                    <img src="img/Group (2).svg" alt="">
-                                </div>
-                                <div class = "Balats">
-                                    Шевчук Марина
-                                </div>
-                                <div class = "reviews_block_first_text">
-                                    Дуже вдячна всім організаторам табору. . 
-                                    Пошуки табору були дуже довгими і прискіпливими. 
-                                    Хотілось отримати знання і незабутні враження. 
-                                    Всім цим вимогам на 100% відповідає ІТ табір від Вінницької ІТ Академії.
-                                </div>
-                                <div class = "reviews_block_first_date">
-                                    18.02.2018
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
-                                <div class = "kavuchka">
-                                <img src="img/“.svg" alt="">
-                                </div>
-                                <div class="reviews_block_first_img">
-                                    <img src="img/Group (2).svg" alt="">
-                                </div>
-                                <div class = "Balats">
-                                    Ковальчук Таня
-                                </div>
-                                <div class = "reviews_block_first_text">
-                                    У Вінницькій ІТ Академії я навчаюсь вже півтора року і можу сміливо сказати, 
-                                    що на парах все пояснюється легко та доступно.
-                                    Без проблем можна запитати щось у викладача і запитати те,що не зрозумів або дізнатись нове.
-                                    Це найкраша школа у Вінниці і чудовий вибір для початкових програмістів будь-якого віку.
-                                </div>
-                                <div class = "reviews_block_first_date">
-                                    16.04.2018
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
-                                <div class = "kavuchka">
-                                <img src="img/“.svg" alt="">
-                                </div>
-                                <div class="reviews_block_first_img">
-                                    <img src="img/boy 1.svg" alt="">
-                                </div>
-                                <div class = "Balats">
-                                    Смирнов Дмитро
-                                </div>
-                                <div class = "reviews_block_first_text">                                   
-                                    В ІТ-Академії добре навчають.Навіть дають все для гарного та комфортного навчання. 
-                                    Ноутбуки, зарядки, мишки, релаксрум, кухня... Мені подобаються всі вчителі та всі пари. 
-                                    Вчителі гарно навчають та допомогають тим, в кого не дуже виходить. 
-                                    Поки що Академія невелика, тому майже всі знають один одного і навіть якщо ти новенький, 
-                                    то через декілька днів ти будеш розмовляти майже зі всіма.
-                                </div>
-                                <div class = "reviews_block_first_date">
-                                    02.09.2012
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
-                                <div class = "kavuchka">
-                                <img src="img/“.svg" alt="">
-                                </div>
-                                <div class="reviews_block_first_img">
-                                    <img src="img/boy 1.svg" alt="">
-                                </div>
-                                <div class = "Balats">
-                                    Лук’янов Саша
-                                </div>
-                                <div class = "reviews_block_first_text">                                                                     
-                                    Я вже рік займаюсь в ІТ-академії.
-                                    Мені подобається:
-                                    Викладачі, які добре пояснюють матеріал;
-                                    Учні, які можуть допомогти коли я цього потребую;
-                                    Техніка, яка дає нам можливість не витрачати кошти на ноутбуки, мишки і т.д;
-                                </div>
-                                <div class = "reviews_block_first_date">
-                                    31.02.2015
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="reviews_block_first">
-                                <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
-                                <div class = "kavuchka">
-                                <img src="img/“.svg" alt="">
-                                </div>
-                                <div class="reviews_block_first_img">
-                                    <img src="img/Group (2).svg" alt="">
-                                </div>
-                                <div class = "Balats">
-                                    Мороз Катя
-                                </div>
-                                <div class = "reviews_block_first_text">                                                                     
-                                    Дуже вдячна всім організаторам табору. . 
-                                    Пошуки табору були дуже довгими і прискіпливими. 
-                                    Хотілось отримати знання і незабутні враження. 
-                                    Всім цим вимогам на 100% відповідає ІТ табір від Вінницької ІТ Академії.
-                                </div>
-                                <div class = "reviews_block_first_date">
-                                    18.02.2018
-                                </div>
-                            </div>
-                        </div>
+
+                   
+                    
+ @foreach($posts as $post )
+            
+
+            <div class="slide">
+                <div class="reviews_block_first">
+                    <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
+                    <div class = "kavuchka">
+                    <img src="img/“.svg" alt="">
+                    </div>
+                    <div class="reviews_block_first_img">
+                        <img src="{{ $post['url'] }}" alt="">
+                    </div>
+                    <div class = "Balats">
+                        {{ $post['name'] }}  {{ $post['lastname'] }}
+                    </div>
+                    <div class = "reviews_block_first_text">
+                        {{ $post['description'] }} </div>
+                    <div class = "reviews_block_first_date">
+                        {{ $post['publishdate'] }}
+                    </div>
+                </div>
+            </div>
+        @endforeach
+                   
+
+                     
 
                     </div> 
                 </div>

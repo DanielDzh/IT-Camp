@@ -95,4 +95,17 @@ class TeacherController extends Controller
         return redirect()->back()->withSuccess('Успішно видалено викладача: '.$teacher->name);
     
     }
+
+    public function search(){
+        $search_text = $_GET['query'];
+        
+       //$f=array('id'=>"1",'name'=>"uriy",'lastname'=>"Chub",'profession'=>"dsfsdf",'url'=>"sdf", 'alt_name'=>"sdfdsf", 'description'=>"sdf");
+        $teachers=Teacher::where('lastname', $search_text)->get();
+        
+        return view('admin.teachers.search', [
+            'teachers' => $teachers
+
+        ]);
+
+    }
 }

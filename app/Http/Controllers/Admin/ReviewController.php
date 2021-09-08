@@ -16,7 +16,7 @@ class ReviewController extends Controller
     public function index()
     {
         $reviews = Review::orderBy('created_at','desc')->get();
-        
+        //'admin.reviews.index','admin.camp.index'
         return view('admin.reviews.index',[
             'reviews' => $reviews
         ]);

@@ -19,7 +19,7 @@ class CreateReviewsTable extends Migration
             $table->string('lastname');
             $table->string('url');
             $table->string('alt_name');
-            $table->string('description');
+            $table->text('description');
             $table->date('publishdate');
             $table->timestamps();
         });

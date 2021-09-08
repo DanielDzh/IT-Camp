@@ -10,6 +10,9 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\RegisteredController;
 
+use App\Http\Controllers\RenderController;
+use App\Http\Controllers\TeachController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +47,9 @@ Route::resource('reviews', ReviewController::class);
 Route::resource('photos', PhotoController::class);
 Route::resource('users', UserController::class);
 Route::resource('registereds', RegisteredController::class);
+
+Route::get('/', [App\Http\Controllers\RenderController::class, 'reviewsPage'])->name('start');
+Route::get('/search', [App\Http\Controllers\Admin\TeacherController::class, 'search'])->name('teacher');
+
+
+

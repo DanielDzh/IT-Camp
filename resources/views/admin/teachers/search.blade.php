@@ -35,9 +35,15 @@
     <div class="col-lg-14">
         <form class="form-iline my-2 my-lg-0" type="get"action="{{url('/search')}}">
             <input class="form-control mr-sm-2" name="query" type="search">
-            <button class="btn btn-outline-success my-2 my-sm-0 "type="submit">Search</button>
+            <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
+            
         </form>
 
+    </div>
+    <div class="col-lg-14">
+        <button class="btn btn-danger " >
+            <a href="{{route('teachers.index')}}">Назад</a>
+        </button>
     </div>
 <!-- Default box -->
 
@@ -79,7 +85,9 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($teachers as $teacher )
+           
+       
+        @foreach($teachers as $teacher )
             <tr>
                 <td>
                     {{ $teacher['id'] }}
@@ -131,6 +139,9 @@
 
 
             @endforeach
+               
+
+            
             
             
         </tbody>
