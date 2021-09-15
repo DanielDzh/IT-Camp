@@ -24,6 +24,15 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+    
+        <div class="col-sm-6 mb-2">
+            <a class="btn btn-info btn btn-primary" href="{{route('teachers.create')}}">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Додати
+            </a>
+        </div>
+   
 
     <!-- Main content -->
     <section class="content">
@@ -61,16 +70,11 @@
                 <th style="width: 20%">
                     Profession
                 </th>
-                <th style="width: 20%">
-                    Description
-                </th>
+                
                 <th style="width: 20%">
                     Imeges
                 </th>
-                <th>
-                    Alt_name
-                </th>
-
+                
                 <th style="width: 8%" class="text-center">
                     Status
                 </th>
@@ -91,20 +95,22 @@
                 <td>
                     {{ $teacher['profession'] }}
                 </td>
+                
                 <td>
-                    {{ $teacher['description'] }}
+                    <img src="{{url( $teacher['url'] )}}">
                 </td>
-                <td>
-                    {{ $teacher['url'] }}
-                </td>
-                <td>
-                    {{ $teacher['alt_name'] }}
-                </td>
-                <!-- <td class="project_progress">
-                    
-                </td> -->
+                
+                
                 <td class="project-state">
                     <span class="badge badge-success">Success</span>
+                </td>
+                <td class="project-actions text-right">
+                    
+                    <a class="btn btn-info btn btn-warning" href="{{route('teachers.show', $teacher['id'] )}}">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Переглянути
+                    </a>
                 </td>
                 <td class="project-actions text-right">
                     
@@ -114,6 +120,7 @@
                         Edit
                     </a>
                 </td>
+                
                 <td>
                 <form action="{{route('teachers.destroy', $teacher['id'] )}}" method="post">
                         @csrf

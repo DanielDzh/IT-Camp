@@ -105,7 +105,7 @@
                     {{ $teacher['description'] }}
                 </td>
                 <td>
-                    {{ $teacher['url'] }}
+                    <img src="{{url( $teacher['url'] )}}">
                 </td>
                 <td>
                     {{ $teacher['alt_name'] }}

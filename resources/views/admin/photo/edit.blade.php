@@ -47,7 +47,8 @@
                   </div> -->
                   <div class="form-group">
                         <label for="exampleInputEmail1">Alt_name</label>
-                        <textarea name="alt_name" class="editor">{{$photos['alt_name']}}</textarea>
+                        
+                        <input type="text" name="alt_name" value="{{$photos['alt_name']}}" class="form-control" id="text" placeholder="Description" required>
                      </div>
                   <div class="form-group">
                         <label for="feature_image">Додати зображення</label>

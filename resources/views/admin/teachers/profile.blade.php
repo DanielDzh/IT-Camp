@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title','Всі картинки')
+@section('title','Викладачі')
 
 @section('content')
 <!-- Content Header (Page header) -->
@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Всі картинки</h1>
+            <h1 class="m-0">Викладачі</h1>
           </div><!-- /.col -->
           @if (session('success'))
                 <div class="alert alert-success" role="alert">
@@ -24,13 +24,6 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-        <div class="col-sm-6 mb-2">
-            <a class="btn btn-info btn btn-primary" href="{{route('photos.create')}}">
-                    <i class="fas fa-pencil-alt">
-                    </i>
-                    Додати
-            </a>
-        </div>
 
     <!-- Main content -->
     <section class="content">
@@ -38,8 +31,19 @@
         <div class="col-lg-12">
         <section class="content">
 
+
+    <div class="col-lg-14">
+        <form class="form-iline my-2 my-lg-0" type="get"action="{{url('/search')}}">
+            <input class="form-control mr-sm-2" name="query" type="search">
+            <button class="btn btn-outline-success my-2 my-sm-0 "type="submit">Search</button>
+        </form>
+
+    </div>
 <!-- Default box -->
+
 <div class="card">
+   
+    
   
   <div class="card-body p-0">
     <table class="table table-striped projects">
@@ -48,8 +52,19 @@
                 <th style="width: 1%">
                     id
                 </th>
-                
-                <th style="width: 30%">
+                <th style="width: 20%">
+                    Name
+                </th>
+                <th style="width: 20%">
+                    Lastname
+                </th>
+                <th style="width: 20%">
+                    Profession
+                </th>
+                <th style="width: 20%">
+                    Description
+                </th>
+                <th style="width: 20%">
                     Imeges
                 </th>
                 <th>
@@ -62,17 +77,28 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($photos as $photo )
+            
             <tr>
                 <td>
-                    {{ $photo['id'] }}
-                </td>
-                
-                <td>
-                  <img src="{{url( $photo['url'] )}}">
+                    {{ $teacher['id'] }}
                 </td>
                 <td>
-                    {{ $photo['alt_name'] }}
+                    {{ $teacher['name'] }}
+                </td>
+                <td>
+                    {{ $teacher['lastname'] }}
+                </td>
+                <td>
+                    {{ $teacher['profession'] }}
+                </td>
+                <td>
+                    {{ $teacher['description'] }}
+                </td>
+                <td>
+                <img src="{{url( $teacher['url'] )}}">
+                </td>
+                <td>
+                    {{ $teacher['alt_name'] }}
                 </td>
                 <!-- <td class="project_progress">
                     
@@ -82,14 +108,14 @@
                 </td>
                 <td class="project-actions text-right">
                     
-                    <a class="btn btn-info btn-sm" href="{{route('photos.edit', $photo['id'] )}}">
+                    <a class="btn btn-info btn-sm" href="{{route('teachers.edit', $teacher['id'] )}}">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Edit
                     </a>
                 </td>
                 <td>
-                <form action="{{route('photos.destroy', $photo['id'] )}}" method="post">
+                <form action="{{route('teachers.destroy', $teacher['id'] )}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >
@@ -99,16 +125,26 @@
                         </button>
 
                     </form>
-                  </td>
+                </td>
             </tr>
+            
 
 
-            @endforeach
+           
             
             
         </tbody>
+        
     </table>
   </div>
+  <div class="row">
+            <a href="{{route('teachers.index')}}" class="nav-link ">
+                    <div class="card-footer">
+                    <button type="" class="btn btn-primary">Повернутися до списку</button>
+                    </div>
+                </a>
+                
+          </div>
   <!-- /.card-body -->
 </div>
 <!-- /.card -->

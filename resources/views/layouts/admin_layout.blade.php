@@ -77,7 +77,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{route('users.index')}}" class="nav-link">
               
               <i class="nav-icon fas fa-portrait"></i>
               <p>
@@ -85,37 +85,12 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('users.index')}}" class="nav-link ">
-                  
-                  <p>Всі користувачі</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                  
-                  <p>Додати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Редагувати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Видалити </p>
-                </a>
-              </li>
-            </ul>
+            
           </li>
 
 
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{route('registereds.index')}}" class="nav-link">
             <i class="nav-icon fas fa-child"></i>
              
               <p>
@@ -123,39 +98,14 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('registereds.index')}}" class="nav-link ">
-                  
-                  <p>Всі зареєстровані</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                  
-                  <p>Додати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Редагувати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Видалити </p>
-                </a>
-              </li>
-            </ul>
+            
           </li>
 
 
 
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('entertainments.index')}}" class="nav-link">
               
               <i class="nav-icon far fa-smile"></i>
               <p>
@@ -163,39 +113,14 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('entertainments.index')}}" class="nav-link ">
-                  
-                  <p>Всі розваги</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('entertainments.create')}}" class="nav-link">
-                  
-                  <p>Додати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  
-                  <p>Редагувати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Видалити </p>
-                </a>
-              </li>
-            </ul>
+            
           </li>
 
 
 
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('teachers.index')}}" class="nav-link">
               
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>
@@ -203,37 +128,12 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('teachers.index')}}" class="nav-link ">
-                  
-                  <p>Всі викладачі</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('teachers.create')}}" class="nav-link">
-                  
-                  <p>Додати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Редагувати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Видалити </p>
-                </a>
-              </li>
-            </ul>
+            
           </li>
 
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('photos.index')}}" class="nav-link">
               
               <i class="nav-icon fas fa-camera-retro"></i>
               <p>
@@ -241,38 +141,13 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('photos.index')}}" class="nav-link ">
-                  
-                  <p>Всі зображення</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('photos.create')}}" class="nav-link">
-                  
-                  <p>Додати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Редагувати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Видалити </p>
-                </a>
-              </li>
-            </ul>
+            
           </li>
 
 
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('reviews.index')}}" class="nav-link">
             
             <i class="nav-icon far fa-newspaper"></i>
               <p>
@@ -280,32 +155,7 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('reviews.index')}}" class="nav-link ">
-                  
-                  <p>Всі відгуки</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('reviews.create')}}" class="nav-link">
-                  
-                  <p>Додати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Редагувати </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  
-                  <p>Видалити </p>
-                </a>
-              </li>
-            </ul>
+            
           </li>
           
           

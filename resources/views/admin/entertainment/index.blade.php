@@ -24,6 +24,13 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+    <div class="col-sm-6 mb-2">
+            <a class="btn btn-info btn btn-primary" href="{{route('entertainments.create')}}">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Додати
+            </a>
+        </div>
 
     <!-- Main content -->
     <section class="content">
@@ -66,7 +73,7 @@
                     {{ $entertainment['description'] }}
                 </td>
                 <td>
-                    {{ $entertainment['url'] }}
+                    <img src="{{url( $entertainment['url'] )}}">
                 </td>
                 <td>
                     {{ $entertainment['alt_name'] }}
