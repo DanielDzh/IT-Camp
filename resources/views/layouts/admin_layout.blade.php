@@ -104,8 +104,8 @@
 
           <li class="nav-item">
             <a href="{{route('abouts.index')}}" class="nav-link">
-              
-              <i class="nav-icon far fa-smile"></i>
+             
+              <i class="nav-icon fas fa-archive"></i>
               <p>
                 Про нас
                 <i class="right fas fa-angle-left"></i>

@@ -35,7 +35,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
 Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'] )->name('homeAdmin');
     

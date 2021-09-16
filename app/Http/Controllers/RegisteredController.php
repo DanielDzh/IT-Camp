@@ -16,9 +16,9 @@ class RegisteredController extends Controller
     {
         $registereds = Registered::orderBy('created_at','desc')->get();
     
-    return view('admin.registered.index',[
-        'registereds' => $registereds
-    ]);
+        return view('admin.registered.index',[
+            'registereds' => $registereds
+        ]);
     }
 
     /**
@@ -52,7 +52,7 @@ class RegisteredController extends Controller
      */
     public function show(Registered $registered)
     {
-        //
+        
     }
 
     /**

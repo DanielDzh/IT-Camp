@@ -153,7 +153,7 @@
                               </div>
                 </div>
                 <div class="block_reg_img">
-                    <img src="img/Rectangle (2).svg" alt="">
+                    <img src="img/Rectangle (2).svg" alt="" loading="lazy">
                 </div>
             </div>
             <div class="block_awaits_you">
@@ -164,7 +164,7 @@
                     @foreach($abouts as $about )
 
                         <div class="awaits_you">
-                            <img src="{{ $about['url'] }}" alt="">
+                            <img src="{{ $about['url'] }}" alt="" loading="lazy">
                             
                             <div>
                             {{ $about['description'] }}
@@ -182,7 +182,7 @@
                             <span class = "span_2">простір для здорового  
                                 розвитку і самореалізації дітей</span>
                         </div>
-                    <img src="img/Rectangle (1).svg" alt="">
+                    <img src="img/Rectangle (1).svg" alt="" loading="lazy">
                     <div class="haos_text">
 
                         <div class = "haos_text_IT">
@@ -199,7 +199,7 @@
                             <div></div>
                         </div>
                         <div class = "haos_text_creatSite_2">
-                            <div><img src="img/Rectangle.svg" alt=""></div>
+                            <div><img src="img/Rectangle.svg" alt="" loading="lazy"></div>
                            <div class = "Hacuna" style="background: url(img/Rectangle\ 79.svg) center no-repeat; padding: 15px 5px;"> дізнатися про особливості<br>
                             сучасного веб-дизайну; 
                             </div>
@@ -209,7 +209,7 @@
                            <div class = "Hacuna" style="background: url(img/Rectangle\ 77.svg) center no-repeat; padding: 15px 30px;">покращити знання з <br>
                             англійської  мови для ІТ
                             </div> 
-                            <div><img src="img/Frame (1).svg" alt=""></div>
+                            <div><img src="img/Frame (1).svg" alt="" loading="lazy"></div>
                         </div>
                         <div class = "haos_text_creatSite_4">
                             <div></div>
@@ -230,17 +230,17 @@
                     програма
                 </div>
                 <div class="four_two">
-                    <img src="img/4.svg" alt="">
+                    <img src="img/4.svg" alt="" loading="lazy">
                     пізнавальні
                     тижні
                 </div>
                 <div class="four_tree">
-                    <img src="img/5.svg" alt="">    
+                    <img src="img/5.svg" alt="" loading="lazy">    
                     днів
                     на тиждень
                 </div>
                 <div class="four_four">
-                    <img src="img/6.svg" alt="">  
+                    <img src="img/6.svg" alt="" loading="lazy">  
                     годин 
                     на день
                 </div>
@@ -258,7 +258,7 @@
                     
                     <div>
                         
-                        <img src="{{ $entertaiment['url'] }}" alt="">
+                        <img src="{{ $entertaiment['url'] }}" alt="" loading="lazy">
                         <span>{{ $entertaiment['description'] }}<br>
                             
                         </span>
@@ -276,30 +276,7 @@
                     Викладачі
                 </div>
 
-                <!-- <div class="teachers_iniz">
-                @foreach($teachers as $teacher )
-
-        <div class="Troxumchuk">
-                <div>
-                    <img src="{{ $teacher['url'] }}" alt="">
-                </div>
-                <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                    {{ $teacher['name'] }}  {{ $teacher['lastname'] }}
-                </div>
-                <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                    {{ $teacher['profession'] }} 
-                </div>
-                <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                    {{ $teacher['description'] }} 
-                </div>
-            </div>
-
-
-        @endforeach -->
    
-
-
-                    
                 <div id="carousel" class="carousel">
                     <button class="arrow prev"></button>   
                     <div class="gallery_teachers">
@@ -309,7 +286,7 @@
                         @foreach($teachers as $teacher )
                             <div class="teach">
                             <div>
-                                <img src="{{ $teacher['url'] }}" alt="">
+                                <img src="{{ $teacher['url'] }}" alt="" loading="lazy">
                             </div>
                             <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
                             {{ $teacher['name'] }}  {{ $teacher['lastname'] }}
@@ -324,195 +301,7 @@
                             @endforeach
                         </li>
                         </div>
-                        <div>
-                        <li class = "lili">
-
-                            <div class="teach">
-                            <div>
-                                <img src="img/1 (1).svg" alt="">
-                            </div>
-                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                                Ольга Трохимчук
-                            </div>
-                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                                Логіка
-                            </div>
-                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
-                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
-                            </div>
-                            </div>
-                        </li>
-                        </div>
-                        <div>
-                        <li class = "lili">
-
-                            <div class="teach">
-                            <div>
-                                <img src="img/1 (1).svg" alt="">
-                            </div>
-                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                                Ольга Трохимчук
-                            </div>
-                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                                Логіка
-                            </div>
-                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
-                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
-                            </div>
-                            </div>
-                        </li>
-                        </div>
-                        <div>
-                        <li class = "lili">
-
-                            <div class="teach">
-                            <div>
-                                <img src="img/1 (1).svg" alt="">
-                            </div>
-                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                                Ольга Трохимчук
-                            </div>
-                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                                Логіка
-                            </div>
-                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
-                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
-                            </div>
-                            </div>
-                        </li>
-                        </div>
-                        <div>
-                        <li class = "lili">
-
-                            <div class="teach">
-                            <div>
-                                <img src="img/1 (1).svg" alt="">
-                            </div>
-                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                                Ольга Трохимчук
-                            </div>
-                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                                Логіка
-                            </div>
-                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
-                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
-                            </div>
-                            </div>
-                        </li>
-                        </div>
-                        <div>
-                        <li class = "lili">
-
-                            <div class="teach">
-                            <div>
-                                <img src="img/1 (1).svg" alt="">
-                            </div>
-                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                                Ольга Трохимчук
-                            </div>
-                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                                Логіка
-                            </div>
-                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
-                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
-                            </div>
-                            </div>
-                        </li>
-                        </div>
-                        <div>
-                        <li class = "lili">
-
-                            <div class="teach">
-                            <div>
-                                <img src="img/1 (1).svg" alt="">
-                            </div>
-                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                                Ольга Трохимчук
-                            </div>
-                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                                Логіка
-                            </div>
-                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
-                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
-                            </div>
-                            </div>
-                        </li>
-                        </div>
-                        <div>
-                        <li class = "lili">
-
-                            <div class="teach">
-                            <div>
-                                <img src="img/1 (1).svg" alt="">
-                            </div>
-                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                                Ольга Трохимчук
-                            </div>
-                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                                Логіка
-                            </div>
-                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
-                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
-                            </div>
-                            </div>
-                        </li>
-                        </div>
-                        <div>
-                        <li class = "lili">
-
-                            <div class="teach">
-                            <div>
-                                <img src="img/1 (1).svg" alt="">
-                            </div>
-                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                                Ольга Трохимчук
-                            </div>
-                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                                Логіка
-                            </div>
-                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
-                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
-                            </div>
-                            </div>
-                        </li>
-                        </div>
-                        <div>
-                        <li class = "lili">
-
-                            <div class="teach">
-                            <div>
-                                <img src="img/1 (1).svg" alt="">
-                            </div>
-                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                                Ольга Трохимчук
-                            </div>
-                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                                Логіка
-                            </div>
-                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                                Я Оля! В своїй викладацькій роботі роблю наголос на практичні знання. 
-                                Я вважаю за головне, на кожному занятті ділитись своїми знаннями. 
-                                Я віддаю ці крупинки на кожному занятті і коли їх зрозуміють учні.
-                            </div>
-                            </div>
-                        </li>
-                        </div>
+                        
                         <!-- <li><img class="img" src="https://ru.js.cx/carousel/10.png"></li>
                         <li><img class="img" src="https://ru.js.cx/carousel/5.png"></li>
                         <li><img class="img" src="https://ru.js.cx/carousel/6.png"></li> -->
@@ -527,52 +316,20 @@
                 </div>
                 <div class="photo">
                     <div class="gallery_items">
-                        <div class="gallery_item gray">
-                            <img src="img/Frame 8.png" alt="клик для увеличения">
-                        </div>
-                        <div class="gallery_item gray">
-                            <img src="img/Frame 9.png" alt="клик для увеличения">
-                        </div>
-                        <div class="gallery_item gray">
-                            <img src="img/Frame 15.png" alt="клик для увеличения">
-                        </div>
-                        <div class="gallery_item gray">
-                            <img src="img/Frame 12.png" alt="клик для увеличения">
-                        </div>
-                        <div class="gallery_item gray">
-                            <img src="img/Frame 10.png" alt="клик для увеличения">
-                        </div>
-                        <div class="gallery_item gray">
-                            <img src="img/Frame 7.png" alt="клик для увеличения">
-                        </div>
-                        <div class="gallery_item gray">
-                            <img src="img/Frame 11.png" alt="клик для увеличения">
-                        </div>
-                        <div class="gallery_item gray">
-                            <img src="img/Frame 14.png" alt="клик для увеличения">
-                        </div>
-                        <div class="gallery_item gray">
-                            <img src = "img/Frame 401.png" alt="клик для увеличения">
-                        </div>
-                        <div class="gallery_item gray">
-                            <img src="img/Frame 13.png" alt="клик для увеличения">
-                        </div>
-                        <!-- <div class="gallery_item gray">
-                            <img src="img/Frame 411.png" alt="клик для увеличения">
-                        </div> -->
+                        @foreach($photos as $photo )
+                            <div class="gallery_item gray">
+                                <img src="{{ $photo['url'] }}" alt="" loading="lazy">
+                            </div>
+                        @endforeach
+                        
+                       
                     </div>
                 </div>
 
                 <div id = "popup" class = "popup">
                     <div class="popup_body">
                         <div id = "popup_content" class="popup_content">
-                            <!-- <a href="" class="popup_close close-popup">X</a> -->
-                            <!-- <a href="https://www.instagram.com/intitaedu/"><img src="img/instagram (3) 1.svg" alt=""></a>
-                            <a href="https://t.me/IT_Academy_Vinnytsia"><img src="img/telegram (2) 1.svg" alt=""></a>
-                            <a href="https://www.facebook.com/intita.it"><img src="img/facebook 3.svg" alt=""></a>
-                            <a href="https://www.youtube.com/c/ITAcademyVinnytsia"><img src="img/youtube 3.svg" alt=""></a> -->
-                            <!-- <a href="https://twitter.com/INTITA_EDU"><img src="img/twitter (1) 3.svg" alt=""></a>  -->
-                            <!-- <a href="viber://chat?number=+380631892256"><img src="img/viber 3.svg" alt=""></a>                        -->
+                         
                         </div>
                     </div>
                 </div>
@@ -595,10 +352,10 @@
                 <div class="reviews_block_first">
                     <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                     <div class = "kavuchka">
-                    <img src="img/“.svg" alt="">
+                    <img src="img/“.svg" alt="" loading="lazy">
                     </div>
                     <div class="reviews_block_first_img">
-                        <img src="{{ $post['url'] }}" alt="">
+                        <img src="{{ $post['url'] }}" alt="" loading="lazy">
                     </div>
                     <div class = "Balats">
                         {{ $post['name'] }}  {{ $post['lastname'] }}

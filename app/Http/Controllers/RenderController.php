@@ -5,6 +5,7 @@ use App\Models\Review;
 use App\Models\Teacher;
 use App\Models\Entertainment;
 use App\Models\About;
+use App\Models\Photo;
 use Illuminate\Http\Request;
 
 class RenderController extends Controller
@@ -17,8 +18,10 @@ class RenderController extends Controller
    
         $entertaiments= Entertainment::all();
 
-        $abouts= About::all();
+        $abouts = About::all();
 
-        return view('camp.index',compact('abouts','posts','teachers','entertaiments'));
+        $photos = Photo::all(); 
+
+        return view('camp.index',compact('abouts','posts','teachers','entertaiments','photos'));
     }
 }
