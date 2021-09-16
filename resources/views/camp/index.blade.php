@@ -153,7 +153,7 @@
                               </div>
                 </div>
                 <div class="block_reg_img">
-                    <img src="img/Rectangle (2).svg" alt="" loading="lazy">
+                    <img src="img/Rectangle (2).svg" alt="">
                 </div>
             </div>
             <div class="block_awaits_you">
@@ -161,20 +161,55 @@
                     Що вас очікує
                 </div>
                 <div class="line">
-                    @foreach($abouts as $about )
-
-                        <div class="awaits_you">
-                            <img src="{{ $about['url'] }}" alt="" loading="lazy">
-                            
-                            <div>
-                            {{ $about['description'] }}
-                            </div>
+                    <div class="awaits_you">
+                        <img src="img/notebook_1.png" alt="">
+                        
+                        <div>
+                            Продуктивне навчання від викладачів-практиків
                         </div>
-                    @endforeach
-                    
+                    </div>
+                    <div class="awaits_you">
+                        <img src="img/web-site_1.png" alt="">
+                        <div>
+                            Створення власного сайту та розробка логотипу
+                        </div>
+                        
+                    </div>
+                    <div class="awaits_you">
+                        <img src="img/linguistics_1.png" alt="">
+                        <div>
+                            Покращення знань 
+                            із англійської мови
+                        </div>
+                        
+                    </div>
+                <!-- </div> -->
+                <!-- <div class="second_line"> -->
+                    <div class="awaits_you">
+                        <img src="img/hand_1.png" alt="">
+                        <div>
+                            Вивчення технік
+                            самооборони
+                        </div>
+                        
+                    </div>
+                    <div class="awaits_you">
+                        <img src="img/running_1.png" alt="">
+                        <div>
+                            Заняття спортом з
+                            професійним тренером
+                        </div>
+                        
+                    </div>
+                    <div class="awaits_you">
+                        <img src="img/motivation_1.png" alt="">
+                        <div>
+                            Мотивація та заохочення школярів
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
-
             <div id = "block" class="block_content">
                 <div class = "haos">
                 <div class = "haos_text_IT_adaptive">
@@ -182,7 +217,7 @@
                             <span class = "span_2">простір для здорового  
                                 розвитку і самореалізації дітей</span>
                         </div>
-                    <img src="img/Rectangle (1).svg" alt="" loading="lazy">
+                    <img src="img/Rectangle (1).svg" alt="">
                     <div class="haos_text">
 
                         <div class = "haos_text_IT">
@@ -199,7 +234,7 @@
                             <div></div>
                         </div>
                         <div class = "haos_text_creatSite_2">
-                            <div><img src="img/Rectangle.svg" alt="" loading="lazy"></div>
+                            <div><img src="img/Rectangle.svg" alt=""></div>
                            <div class = "Hacuna" style="background: url(img/Rectangle\ 79.svg) center no-repeat; padding: 15px 5px;"> дізнатися про особливості<br>
                             сучасного веб-дизайну; 
                             </div>
@@ -209,7 +244,7 @@
                            <div class = "Hacuna" style="background: url(img/Rectangle\ 77.svg) center no-repeat; padding: 15px 30px;">покращити знання з <br>
                             англійської  мови для ІТ
                             </div> 
-                            <div><img src="img/Frame (1).svg" alt="" loading="lazy"></div>
+                            <div><img src="img/Frame (1).svg" alt=""></div>
                         </div>
                         <div class = "haos_text_creatSite_4">
                             <div></div>
@@ -230,17 +265,17 @@
                     програма
                 </div>
                 <div class="four_two">
-                    <img src="img/4.svg" alt="" loading="lazy">
+                    <img src="img/4.svg" alt="">
                     пізнавальні
                     тижні
                 </div>
                 <div class="four_tree">
-                    <img src="img/5.svg" alt="" loading="lazy">    
+                    <img src="img/5.svg" alt="">    
                     днів
                     на тиждень
                 </div>
                 <div class="four_four">
-                    <img src="img/6.svg" alt="" loading="lazy">  
+                    <img src="img/6.svg" alt="">  
                     годин 
                     на день
                 </div>
@@ -253,12 +288,12 @@
                 <div class = "Enter_line">
             
                     
-                @foreach($entertaiments as $entertaiment )
+                    @foreach($entertaiments as $entertaiment )
 
                     
                     <div>
                         
-                        <img src="{{ $entertaiment['url'] }}" alt="" loading="lazy">
+                        <img src="{{ $entertaiment['url'] }}" alt="">
                         <span>{{ $entertaiment['description'] }}<br>
                             
                         </span>
@@ -275,61 +310,55 @@
                 <div class="teachers_text">
                     Викладачі
                 </div>
-
    
-                <div id="carousel" class="carousel">
-                    <button class="arrow prev"></button>   
-                    <div class="gallery_teachers">
-                    <ul class="images heigth">
+
+        <div class="reviews_block">
+            <div style = "margin: 50px;" class="teach_slider">
+                @foreach($teachers as $teacher )
+                <div class="slide">
+                    
+                    <div class="teach">
                         <div>
-                        <li class = "lili">
-                        @foreach($teachers as $teacher )
-                            <div class="teach">
-                            <div>
-                                <img src="{{ $teacher['url'] }}" alt="" loading="lazy">
-                            </div>
-                            <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
-                            {{ $teacher['name'] }}  {{ $teacher['lastname'] }}
-                            </div>
-                            <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
-                            {{ $teacher['profession'] }} 
-                            </div>
-                            <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
-                            {{ $teacher['description'] }} 
-                            </div>
-                            </div>
-                            @endforeach
-                        </li>
+                            <img src="{{ $teacher['url'] }}" alt="">
                         </div>
-                        
-                        <!-- <li><img class="img" src="https://ru.js.cx/carousel/10.png"></li>
-                        <li><img class="img" src="https://ru.js.cx/carousel/5.png"></li>
-                        <li><img class="img" src="https://ru.js.cx/carousel/6.png"></li> -->
-                    </ul>
+                        <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                            {{ $teacher['name'] }}  {{ $teacher['lastname'] }}
+                        </div>
+                        <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                            {{ $teacher['profession'] }} 
+                        </div>
+                        <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                            {{ $teacher['description'] }} 
+                        </div>
                     </div>
-                    <button class="arrow next"></button>
-                </div>
+                    </div> 
+                @endforeach   
             </div>
+        </div>
             <div class="galery">
                 <div class="galery_text">
                     Галерея IT табору
                 </div>
                 <div class="photo">
                     <div class="gallery_items">
-                        @foreach($photos as $photo )
-                            <div class="gallery_item gray">
-                                <img src="{{ $photo['url'] }}" alt="" loading="lazy">
-                            </div>
-                        @endforeach
-                        
-                       
+                    @foreach($photos as $photo )
+                        <div class="gallery_item gray">
+                            <img src="{{ $photo['url'] }}" alt="клик для увеличения">
+                        </div>
+                    @endforeach
                     </div>
                 </div>
 
                 <div id = "popup" class = "popup">
                     <div class="popup_body">
                         <div id = "popup_content" class="popup_content">
-                         
+                            <!-- <a href="" class="popup_close close-popup">X</a> -->
+                            <!-- <a href="https://www.instagram.com/intitaedu/"><img src="img/instagram (3) 1.svg" alt=""></a>
+                            <a href="https://t.me/IT_Academy_Vinnytsia"><img src="img/telegram (2) 1.svg" alt=""></a>
+                            <a href="https://www.facebook.com/intita.it"><img src="img/facebook 3.svg" alt=""></a>
+                            <a href="https://www.youtube.com/c/ITAcademyVinnytsia"><img src="img/youtube 3.svg" alt=""></a> -->
+                            <!-- <a href="https://twitter.com/INTITA_EDU"><img src="img/twitter (1) 3.svg" alt=""></a>  -->
+                            <!-- <a href="viber://chat?number=+380631892256"><img src="img/viber 3.svg" alt=""></a>                        -->
                         </div>
                     </div>
                 </div>
@@ -352,10 +381,10 @@
                 <div class="reviews_block_first">
                     <img style = "position: absolute; top: -110px; right: 300px;" src="#" alt="">
                     <div class = "kavuchka">
-                    <img src="img/“.svg" alt="" loading="lazy">
+                    <img src="img/“.svg" alt="">
                     </div>
                     <div class="reviews_block_first_img">
-                        <img src="{{ $post['url'] }}" alt="" loading="lazy">
+                        <img src="{{ $post['url'] }}" alt="">
                     </div>
                     <div class = "Balats">
                         {{ $post['name'] }}  {{ $post['lastname'] }}

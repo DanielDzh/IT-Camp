@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\EntertainmentController;
-use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\PhotoController;
@@ -35,13 +34,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
 Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'] )->name('homeAdmin');
     
 });
 
 Route::resource('entertainments', EntertainmentController::class);
-Route::resource('abouts', AboutController::class);
 Route::resource('teachers', TeacherController::class);
 Route::resource('users', RegisterController::class);
 Route::resource('reviews', ReviewController::class);

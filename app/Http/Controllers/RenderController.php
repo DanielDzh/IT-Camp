@@ -3,25 +3,27 @@
 namespace App\Http\Controllers;
 use App\Models\Review;
 use App\Models\Teacher;
-use App\Models\Entertainment;
-use App\Models\About;
 use App\Models\Photo;
+use App\Models\Entertainment;
 use Illuminate\Http\Request;
+
 
 class RenderController extends Controller
 {
     public function reviewsPage(){
 
-        $posts = Review::all();
+        $news= new Review();
+        $posts= $news->get();
 
-        $teachers = Teacher::all();
-   
-        $entertaiments= Entertainment::all();
+        $newsteachers= new Teacher();
+        $teachers= $newsteachers->get();
+       
+        $newsentertaiments= new Entertainment();
+        $entertaiments= $newsentertaiments->get();
 
-        $abouts = About::all();
-
-        $photos = Photo::all(); 
-
-        return view('camp.index',compact('abouts','posts','teachers','entertaiments','photos'));
+        $newphoto= new Photo();
+        $photos= $newphoto->get();
+        //return view('camp.index',['posts'=>$posts->all()]);
+        return view('camp.index',compact('posts','teachers','entertaiments', 'photos'));
     }
 }

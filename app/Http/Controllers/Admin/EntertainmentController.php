@@ -41,7 +41,6 @@ class EntertainmentController extends Controller
     public function store(Request $request)
     {
         Entertainment::create($request->only(['url', 'alt_name', 'description']));
-
         return redirect()->back()->withSuccess('Нову розвагу додано успішно');
     }
 
@@ -80,7 +79,6 @@ class EntertainmentController extends Controller
     public function update(Request $request, Entertainment $entertainment)
     {
         $entertainment->update($request->only(['url', 'alt_name', 'description']));
-
         return redirect()->back()->withSuccess('Успішно редаговано розвагу: '.$entertainment->description);
     }
 
@@ -93,7 +91,6 @@ class EntertainmentController extends Controller
     public function destroy(Entertainment $entertainment)
     {
         $entertainment->delete();
-        
         return redirect()->back()->withSuccess('Успішно видалено розвагу: '.$entertainment->description);
     }
 }

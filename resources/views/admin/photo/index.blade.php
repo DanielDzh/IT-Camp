@@ -24,13 +24,6 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-        <div class="col-sm-6 mb-2">
-            <a class="btn btn-info btn btn-primary" href="{{route('photos.create')}}">
-                    <i class="fas fa-pencil-alt">
-                    </i>
-                    Додати
-            </a>
-        </div>
 
     <!-- Main content -->
     <section class="content">
@@ -69,7 +62,7 @@
                 </td>
                 
                 <td>
-                  <img src="{{url( $photo['url'] )}}">
+                    {{ $photo['url'] }}
                 </td>
                 <td>
                     {{ $photo['alt_name'] }}

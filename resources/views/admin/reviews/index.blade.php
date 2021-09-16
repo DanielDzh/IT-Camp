@@ -24,13 +24,6 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-        <div class="col-sm-6 mb-2">
-            <a class="btn btn-info btn btn-primary" href="{{route('reviews.create')}}">
-                    <i class="fas fa-pencil-alt">
-                    </i>
-                    Додати
-            </a>
-        </div>
 
     <!-- Main content -->
     <section class="content">
@@ -92,7 +85,7 @@
                     {{ $review['publishdate'] }}
                 </td>
                 <td>
-                <img src="{{url( $review['url'] )}}">
+                    {{ $review['url'] }}
                 </td>
                 <td>
                     {{ $review['alt_name'] }}

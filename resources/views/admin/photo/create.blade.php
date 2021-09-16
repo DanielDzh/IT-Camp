@@ -44,7 +44,9 @@
                   </div> -->
                     <div class="form-group">
                         <label for="exampleInputEmail1">Alt_name</label>
-                        <input type="text" name="alt_name" class="form-control" id="text" placeholder="Description" required>
+                        <textarea name="alt_name" class="editor">
+                        
+                        </textarea>
                      </div> 
                     <div class="form-group">
                         <label for="feature_image">Додати зображення</label>
@@ -70,15 +72,10 @@
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-          <div class="row">
+    <div class="row">
             <a href="{{route('photos.index')}}" class="nav-link ">
                     <div class="card-footer">
                     <button type="" class="btn btn-primary">Всі картинки</button>
-                    </div>
-                </a>
-                <a href="{{route('photos.index')}}" class="nav-link ">
-                    <div class="card-footer">
-                    <button type="" class="btn btn-danger">Відміна</button>
                     </div>
                 </a>
           </div>
