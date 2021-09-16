@@ -161,55 +161,20 @@
                     Що вас очікує
                 </div>
                 <div class="line">
-                    <div class="awaits_you">
-                        <img src="img/notebook_1.png" alt="">
-                        
-                        <div>
-                            Продуктивне навчання від викладачів-практиків
+                    @foreach($abouts as $about )
+
+                        <div class="awaits_you">
+                            <img src="{{ $about['url'] }}" alt="">
+                            
+                            <div>
+                            {{ $about['description'] }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="awaits_you">
-                        <img src="img/web-site_1.png" alt="">
-                        <div>
-                            Створення власного сайту та розробка логотипу
-                        </div>
-                        
-                    </div>
-                    <div class="awaits_you">
-                        <img src="img/linguistics_1.png" alt="">
-                        <div>
-                            Покращення знань 
-                            із англійської мови
-                        </div>
-                        
-                    </div>
-                <!-- </div> -->
-                <!-- <div class="second_line"> -->
-                    <div class="awaits_you">
-                        <img src="img/hand_1.png" alt="">
-                        <div>
-                            Вивчення технік
-                            самооборони
-                        </div>
-                        
-                    </div>
-                    <div class="awaits_you">
-                        <img src="img/running_1.png" alt="">
-                        <div>
-                            Заняття спортом з
-                            професійним тренером
-                        </div>
-                        
-                    </div>
-                    <div class="awaits_you">
-                        <img src="img/motivation_1.png" alt="">
-                        <div>
-                            Мотивація та заохочення школярів
-                        </div>
-                        
-                    </div>
+                    @endforeach
+                    
                 </div>
             </div>
+
             <div id = "block" class="block_content">
                 <div class = "haos">
                 <div class = "haos_text_IT_adaptive">
@@ -288,7 +253,7 @@
                 <div class = "Enter_line">
             
                     
-                    @foreach($entertaiments as $entertaiment )
+                @foreach($entertaiments as $entertaiment )
 
                     
                     <div>

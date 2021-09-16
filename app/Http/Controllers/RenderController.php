@@ -4,22 +4,21 @@ namespace App\Http\Controllers;
 use App\Models\Review;
 use App\Models\Teacher;
 use App\Models\Entertainment;
+use App\Models\About;
 use Illuminate\Http\Request;
 
 class RenderController extends Controller
 {
     public function reviewsPage(){
 
-        $news= new Review();
-        $posts= $news->get();
+        $posts = Review::all();
 
-        $newsteachers= new Teacher();
-        $teachers= $newsteachers->get();
-       
-        $newsentertaiments= new Entertainment();
-        $entertaiments= $newsentertaiments->get();
+        $teachers = Teacher::all();
+   
+        $entertaiments= Entertainment::all();
 
-        //return view('camp.index',['posts'=>$posts->all()]);
-        return view('camp.index',compact('posts','teachers','entertaiments'));
+        $abouts= About::all();
+
+        return view('camp.index',compact('abouts','posts','teachers','entertaiments'));
     }
 }
