@@ -102,6 +102,19 @@
           </li>
 
 
+          <li class="nav-item">
+            <a href="{{route('abouts.index')}}" class="nav-link">
+              
+              <i class="nav-icon far fa-smile"></i>
+              <p>
+                Про нас
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            
+          </li>
+
+
 
 
           <li class="nav-item">
@@ -109,7 +122,7 @@
               
               <i class="nav-icon far fa-smile"></i>
               <p>
-                Розваги
+                Програма
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
