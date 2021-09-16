@@ -40,6 +40,7 @@ class RegisteredController extends Controller
     public function store(Request $request)
     {
         Registered::create($request->only(['name','lastname','email','phone']));
+        
         return redirect()->back()->withSuccess('Дані відправлено успішно');
     }
 
@@ -78,6 +79,7 @@ class RegisteredController extends Controller
     public function update(Request $request, Registered $registered)
     {
         $registered->update($request->only(['name','lastname','email','phone']));
+        
         return redirect()->back()->withSuccess('Успішно редаговано користувача: '.$registered->name);
     }
 
@@ -90,6 +92,7 @@ class RegisteredController extends Controller
     public function destroy(Registered $registered)
     {
         $registered->delete();
+        
         return redirect()->back()->withSuccess('Успішно видалено користувача: '.$registered->name);
     }
 }

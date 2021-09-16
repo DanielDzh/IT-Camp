@@ -18,7 +18,7 @@ class UserController extends Controller
     {
         $users = User::orderBy('created_at','desc')->get();
     
-    return view('admin.users.index',[
+        return view('admin.users.index',[
         'users' => $users
     ]);
     }
@@ -79,7 +79,8 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $user->update($request->only(['name','lastname','profession','url', 'alt_name', 'description']));
-    return redirect()->back()->withSuccess('Успішно редаговано користувача: '.$user->name);
+        
+        return redirect()->back()->withSuccess('Успішно редаговано користувача: '.$user->name);
     }
 
     /**
@@ -91,6 +92,7 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-    return redirect()->back()->withSuccess('Успішно видалено користувача: '.$user->name);
+
+        return redirect()->back()->withSuccess('Успішно видалено користувача: '.$user->name);
     }
 }
