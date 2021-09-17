@@ -24,6 +24,14 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+    <div class="row">
+            <a href="{{route('entertainments.create')}}" class="nav-link ">
+                    <div class="card-footer">
+                    <button type="" class="btn btn-primary">Додати</button>
+                    </div>
+            </a>
+                
+    </div>
 
     <!-- Main content -->
     <section class="content">
@@ -66,7 +74,7 @@
                     {{ $entertainment['description'] }}
                 </td>
                 <td>
-                    {{ $entertainment['url'] }}
+                    <img src="{{url( $entertainment['url'] )}}">
                 </td>
                 <td>
                     {{ $entertainment['alt_name'] }}

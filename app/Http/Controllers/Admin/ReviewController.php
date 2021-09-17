@@ -16,7 +16,7 @@ class ReviewController extends Controller
     public function index()
     {
         $reviews = Review::orderBy('created_at','desc')->get();
-        //'admin.reviews.index','admin.camp.index'
+        
         return view('admin.reviews.index',[
             'reviews' => $reviews
         ]);
@@ -41,6 +41,7 @@ class ReviewController extends Controller
     public function store(Request $request)
     {
         Review::create($request->only(['name','lastname','url', 'alt_name', 'description','publishdate']));
+        
         return redirect()->back()->withSuccess('Новий відгук додано успішно');
     }
 
@@ -79,6 +80,7 @@ class ReviewController extends Controller
     public function update(Request $request, Review $review)
     {
         $review->update($request->only(['name','lastname','url', 'alt_name', 'description','publishdate','active']));
+        
         return redirect()->back()->withSuccess('Успішно редаговано відгук: '.$review->description);
     }
 
@@ -91,6 +93,7 @@ class ReviewController extends Controller
     public function destroy(Review $review)
     {
         $review->delete();
+        
         return redirect()->back()->withSuccess('Успішно видалено відгук: '.$review->description);
     }
 }

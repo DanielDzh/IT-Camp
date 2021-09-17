@@ -48,7 +48,7 @@
 
                       <div class="form-group">
                         <label for="exampleInputEmail1">Alt_name</label>
-                        <input type="text" name="alt_name" class="form-control" id="text" placeholder="Description" required>
+                        <input type="text" name="alt_name" class="form-control" id="text" placeholder="Alt_name" required>
                      </div>
                     <div class="form-group">
                         <label for="feature_image">Додати зображення</label>
@@ -73,7 +73,7 @@
     <div class="row">
             <a href="{{route('abouts.index')}}" class="nav-link ">
                     <div class="card-footer">
-                    <button type="" class="btn btn-primary">Всі розваги</button>
+                    <button type="" class="btn btn-primary">Всі розділи</button>
                     </div>
                 </a>
                 <a href="{{route('abouts.index')}}" class="nav-link ">

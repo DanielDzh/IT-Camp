@@ -10,5 +10,10 @@ class Photo extends Model
     use HasFactory;
     public $timestamps = false;
 
-    protected $fillable = [ 'url', 'alt_name','created_at', 'updated_at'];
+    protected $fillable = [ 
+        'url',
+        'alt_name',
+        'created_at',
+        'updated_at'
+    ];
 }

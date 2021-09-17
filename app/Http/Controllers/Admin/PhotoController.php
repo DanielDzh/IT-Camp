@@ -91,6 +91,7 @@ class PhotoController extends Controller
     public function destroy(Photo $photo)
     {
         $photo->delete();
+        
         return redirect()->back()->withSuccess('Успішно видалено картинку: '.$photo->alt_name);
     }
 }

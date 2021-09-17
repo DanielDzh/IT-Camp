@@ -50,7 +50,8 @@
                   </div> -->
                   <div class="form-group">
                         <label for="exampleInputEmail1">Alt_name</label>
-                        <textarea name="alt_name" class="editor">{{$entertainments['alt_name']}}</textarea>
+                        <input type="text" name="alt_name" value="{{$entertainments['alt_name']}}" class="form-control" id="text" placeholder="Description" required>
+                        
                      </div>
 
                   <div class="form-group">
