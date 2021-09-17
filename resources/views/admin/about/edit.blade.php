@@ -44,10 +44,7 @@
                     <input type="text" value="{{$abouts['description']}}" name="description" class="form-control" id="text" placeholder="Опис розваги" required>
                   </div>
                   
-                  <!-- <div class="form-group">
-                    <label for="exampleInputEmail1">Назва зображення</label>
-                    <input type="text" value="{{$entertainments['alt_name']}}" name="alt_name" class="form-control" id="text" placeholder="Назва зображення" required>
-                  </div> -->
+                 
                   <div class="form-group">
                         <label for="exampleInputEmail1">Alt_name</label>
                         
