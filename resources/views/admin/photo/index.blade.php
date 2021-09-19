@@ -25,7 +25,7 @@
     </div>
     <!-- /.content-header -->
     <div class="row">
-            <a href="{{route('photo.create')}}" class="nav-link ">
+            <a href="{{route('photos.create')}}" class="nav-link ">
                     <div class="card-footer">
                     <button type="" class="btn btn-primary">Додати</button>
                     </div>
