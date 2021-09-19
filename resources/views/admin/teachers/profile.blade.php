@@ -95,7 +95,7 @@
                     {{ $teacher['description'] }}
                 </td>
                 <td>
-                <img src="{{url( $teacher['url'] )}}">
+                    <img src="{{url( $teacher['url'] )}}">
                 </td>
                 <td>
                     {{ $teacher['alt_name'] }}
@@ -137,14 +137,14 @@
         
     </table>
   </div>
-  <div class="row">
+    <div class="row">
             <a href="{{route('teachers.index')}}" class="nav-link ">
                     <div class="card-footer">
                     <button type="" class="btn btn-primary">Повернутися до списку</button>
                     </div>
                 </a>
                 
-          </div>
+    </div>
   <!-- /.card-body -->
 </div>
 <!-- /.card -->

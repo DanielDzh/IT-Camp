@@ -10,12 +10,14 @@ class Review extends Model
     use HasFactory;
     public $timestamps = false;
 
-    protected $fillable = [ 'name',
-                            'lastname',
-                            'url',
-                            'alt_name',
-                            'description',
-                            'publishdate',
-                            'created_at',
-                            'updated_at'];
+    protected $fillable = [ 
+        'name',
+        'lastname',
+        'url',
+        'alt_name',
+        'description',
+        'publishdate',
+        'created_at',
+        'updated_at'
+    ];
 }

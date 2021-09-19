@@ -64,9 +64,7 @@
 
                   <div class="form-group">
                         <label for="exampleInputEmail1">Alt_name</label>
-                        <textarea name="alt_name" class="editor">
-                        
-                        </textarea>
+                        <input type="text" name="alt_name" class="form-control" id="text" placeholder="Alt_name" required>
                      </div> 
                      <div class="form-group">
                         <label for="feature_image">Додати зображення</label>

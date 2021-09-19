@@ -24,6 +24,14 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+    <div class="row">
+            <a href="{{route('reviews.create')}}" class="nav-link ">
+                    <div class="card-footer">
+                    <button type="" class="btn btn-primary">Додати</button>
+                    </div>
+            </a>
+                
+    </div>
 
     <!-- Main content -->
     <section class="content">
@@ -85,7 +93,7 @@
                     {{ $review['publishdate'] }}
                 </td>
                 <td>
-                    {{ $review['url'] }}
+                    <img src="{{url( $review['url'] )}}">
                 </td>
                 <td>
                     {{ $review['alt_name'] }}

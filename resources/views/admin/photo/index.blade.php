@@ -24,6 +24,14 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+    <div class="row">
+            <a href="{{route('photo.create')}}" class="nav-link ">
+                    <div class="card-footer">
+                    <button type="" class="btn btn-primary">Додати</button>
+                    </div>
+            </a>
+                
+    </div>
 
     <!-- Main content -->
     <section class="content">
@@ -62,7 +70,7 @@
                 </td>
                 
                 <td>
-                    {{ $photo['url'] }}
+                <img src="{{url( $photo['url'] )}}">
                 </td>
                 <td>
                     {{ $photo['alt_name'] }}

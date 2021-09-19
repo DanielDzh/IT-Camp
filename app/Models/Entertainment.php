@@ -10,5 +10,11 @@ class Entertainment extends Model
     use HasFactory;
     public $timestamps = false;
 
-    protected $fillable = [ 'url', 'alt_name', 'description','created_at', 'updated_at'];
+    protected $fillable = [ 
+        'url', 
+        'alt_name', 
+        'description',
+        'created_at', 
+        'updated_at'
+    ];
 }

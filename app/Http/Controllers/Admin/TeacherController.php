@@ -41,6 +41,7 @@ class TeacherController extends Controller
     public function store(Request $request)
     {
         Teacher::create($request->only(['name','lastname','profession','url', 'alt_name', 'description']));
+
         return redirect()->back()->withSuccess('Нового викладача додано успішно');
     }
 
@@ -52,7 +53,9 @@ class TeacherController extends Controller
      */
     public function show(Teacher $teacher)
     {
-        //
+        return view('admin.teachers.profile',[
+            'teacher' => $teacher
+        ]);
     }
 
     /**
@@ -79,6 +82,7 @@ class TeacherController extends Controller
     public function update(Request $request, Teacher $teacher)
     {
         $teacher->update($request->only(['name','lastname','profession','url', 'alt_name', 'description']));
+
         return redirect()->back()->withSuccess('Успішно редаговано викладача: '.$teacher->name);
     
     }
@@ -92,14 +96,15 @@ class TeacherController extends Controller
     public function destroy(Teacher $teacher)
     {
         $teacher->delete();
+
         return redirect()->back()->withSuccess('Успішно видалено викладача: '.$teacher->name);
     
     }
 
     public function search(){
+
         $search_text = $_GET['query'];
         
-       //$f=array('id'=>"1",'name'=>"uriy",'lastname'=>"Chub",'profession'=>"dsfsdf",'url'=>"sdf", 'alt_name'=>"sdfdsf", 'description'=>"sdf");
         $teachers=Teacher::where('lastname', $search_text)->get();
         
         return view('admin.teachers.search', [

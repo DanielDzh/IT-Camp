@@ -24,13 +24,14 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-    <div class="col-sm-6 mb-2">
-            <a class="btn btn-info btn btn-primary" href="{{route('abouts.create')}}">
-                    <i class="fas fa-pencil-alt">
-                    </i>
-                    Додати
+    <div class="row">
+            <a href="{{route('abouts.create')}}" class="nav-link ">
+                    <div class="card-footer">
+                    <button type="" class="btn btn-primary">Додати</button>
+                    </div>
             </a>
-        </div>
+                
+    </div>
 
     <!-- Main content -->
     <section class="content">

@@ -24,6 +24,14 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+    <div class="row">
+            <a href="{{route('teachers.create')}}" class="nav-link ">
+                    <div class="card-footer">
+                    <button type="" class="btn btn-primary">Додати</button>
+                    </div>
+            </a>
+                
+    </div>
 
     <!-- Main content -->
     <section class="content">
@@ -91,20 +99,24 @@
                 <td>
                     {{ $teacher['profession'] }}
                 </td>
+                
                 <td>
-                    {{ $teacher['description'] }}
+                    <img src="{{url( $teacher['url'] )}}">
                 </td>
-                <td>
-                    {{ $teacher['url'] }}
-                </td>
-                <td>
-                    {{ $teacher['alt_name'] }}
-                </td>
+                
                 <!-- <td class="project_progress">
                     
                 </td> -->
                 <td class="project-state">
                     <span class="badge badge-success">Success</span>
+                </td>
+                <td class="project-actions text-right">
+                    
+                    <a class="btn btn btn-warning" href="{{route('teachers.show', $teacher['id'] )}}">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Переглянути
+                    </a>
                 </td>
                 <td class="project-actions text-right">
                     
