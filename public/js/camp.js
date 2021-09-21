@@ -163,7 +163,7 @@
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-          centerMode: true
+          // centerMode: true
         }
       }
       ]

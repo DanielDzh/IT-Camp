@@ -182,8 +182,8 @@
                     <div class="haos_text">
 
                         <div class = "haos_text_IT">
-                            <span style="font-weight: bold; font-size: 64px; color: #3BA1FF">ІТ Camp — </span>
-                            <span style="font-size: 36px">простір для здорового  
+                            <span>ІТ Camp — </span>
+                            <span>простір для здорового  
                                 розвитку і самореалізації дітей</span>
                         </div>
                         <div class = "haos_text_IT_two">
@@ -282,13 +282,13 @@
                         <div>
                             <img src="{{ $teacher['url'] }}" alt="" loading="lazy">
                         </div>
-                        <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                        <div class = "teach_NL">
                             {{ $teacher['name'] }}  {{ $teacher['lastname'] }}
                         </div>
-                        <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                        <div class = "teach_specialty">
                             {{ $teacher['profession'] }} 
                         </div>
-                        <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                        <div class = "teach_description">
                             {{ $teacher['description'] }} 
                         </div>
                     </div>
@@ -305,20 +305,20 @@
                         <div>
                             <img src="{{ $teacher['url'] }}" alt="" loading="lazy">
                         </div>
-                        <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                        <div class = "teach_NL">
                             {{ $teacher['name'] }}  {{ $teacher['lastname'] }}
                         </div>
-                        <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                        <div class = "teach_specialty">
                             {{ $teacher['profession'] }} 
                         </div>
-                        <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                        <div class = "teach_description">
                             {{ $teacher['description'] }} 
                         </div>
                     </div>
                     </figure>
                 @endforeach 
 </div>
-<span style=float:left class="ss-icon ss-icon_prev"></span>
+<span style="float:left; left:-30px;" class="ss-icon ss-icon_prev"></span>
 <span style=float:right class="ss-icon ss-icon_next"></span>
         </div>
 
