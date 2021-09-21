@@ -42,14 +42,14 @@
 
     <div class="col-lg-14">
         <form class="form-iline my-2 my-lg-0" type="get"action="{{url('/search')}}">
-            <input class="form-control mr-sm-2" name="query" type="search">
+            <input style = "margin-bottom: 10px;" class="form-control mr-sm-2" name="query" type="search">
             <button class="btn btn-outline-success my-2 my-sm-0 "type="submit">Search</button>
         </form>
 
     </div>
 <!-- Default box -->
 
-<div class="card">
+<div style = "margin-top: 15px;" class="card">
    
     
   
@@ -101,7 +101,7 @@
                 </td>
                 
                 <td>
-                    <img src="{{url( $teacher['url'] )}}">
+                    <img style = "width: 50px;" src="{{url( $teacher['url'] )}}">
                 </td>
                 
                 <!-- <td class="project_progress">
