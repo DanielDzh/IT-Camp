@@ -7,7 +7,9 @@
   //   console.error(111);
   // }
 
-
+  // console.log(document.documentElement.clientHeight);
+  // var h = document.querySelector("body");
+  // h.style.maxHeight = String(document.documentElement.clientHeight) + "px";
 
   $(function () {
     $(window).scroll(function () {
@@ -245,9 +247,15 @@
 
 
 
-
-
-
+  var bod = document.querySelector("body");
+  bod.style.paddingBottom = "0px";
+  var error = document.querySelectorAll(".sharethis-sticky-share-buttons");
+  error[0].style.left = "25px";
+  error[0].style.top = "0px";
+  error[0].style.position = "relative";
+  error[1].style.left = "-25px";
+  error[1].style.top = "0px";
+  error[1].style.position = "relative";
   var popuppLinks = document.getElementsByClassName('popupp-link');
   var bodyy = document.querySelector('body');
   var unlockk = true;
@@ -266,7 +274,10 @@
   function popupOpenn(curentPopupp) {
     if (curentPopupp && unlockk) {
       var popupActivee = document.querySelector('.popupp.open');
-
+      error[0].style.display = "block";
+      error[1].style.display = "block";
+      error[0].style.position = "fixed";
+      error[1].style.position = "fixed";
       if (popupActivee) {
         popupClosee(popupActivee, false);
       } else {
@@ -286,6 +297,10 @@
     var doUnlockk = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
     if (unlockk) {
+      error[0].style.display = "none";
+      error[1].style.display = "none";
+      error[0].style.position = "relative";
+      error[1].style.position = "relative";
       popupActivee.classList.remove('open');
 
       if (doUnlockk) {
@@ -309,102 +324,236 @@
   }
 
   // console.log(window.outerWidth);
-  if (window.outerWidth > 930) {
-    window.onload = function () {
-      var arrImg = document.querySelectorAll(".teach_slider .slide");
-      var ind = [];
-      for (let a = 0; a < arrImg.length; a++) {
-        ind[a] = arrImg[a].dataset.slickIndex;
-        // console.log(ind[a]);
+  // if (window.outerWidth > 930) {
+  //   window.onload = function () {
+  //     var arrImg = document.querySelectorAll(".teach_slider .slide");
+  //     var ind = [];
+  //     for (let a = 0; a < arrImg.length; a++) {
+  //       ind[a] = arrImg[a].dataset.slickIndex;
+  //       // console.log(ind[a]);
+  //     }
+  //     // console.log(arrImg[8]);
+  //     // console.log(arrImg[8].dataset.slickIndex);
+  //     var ccount = 0;
+  //     var countWidth = 0;
+  //     arrImg[ccount + 4].querySelector('.teach').classList.add('heigthhh');
+  //     arrImg[ccount + 5].querySelector('.teach').classList.add('heigthhh');
+  //     arrImg[ccount + 6].querySelector('.teach').classList.add('heigthh');
+  //     arrImg[ccount + 7].querySelector('.teach').classList.add('heigth');
+  //     arrImg[ccount + 8].querySelector('.teach').classList.add('heigthh');
+  //     arrImg[ccount + 9].querySelector('.teach').classList.add('heigthhh');
+  //     arrImg[ccount + 10].querySelector('.teach').classList.add('heigthhh');
+
+  //     var next = document.getElementsByClassName("slick-next");
+  //     next[0].classList.add('nextt');
+  //     var prev = document.getElementsByClassName("slick-prev");
+  //     prev[0].classList.add('prevv');
+
+  //     document.querySelector('.prevv').onclick = function () {
+  //       if (ccount !== -1) {
+  //         arrImg[ccount + 4].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 5].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 9].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 10].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 6].querySelector('.teach').classList.remove('heigthh');
+  //         arrImg[ccount + 8].querySelector('.teach').classList.remove('heigthh');
+  //         arrImg[ccount + 7].querySelector('.teach').classList.remove('heigth');
+  //         ccount--;
+  //         console.log(ccount)
+  //         arrImg[ccount + 4].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 5].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 9].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 10].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 6].querySelector('.teach').classList.add('heigthh');
+  //         arrImg[ccount + 8].querySelector('.teach').classList.add('heigthh');
+  //         arrImg[ccount + 7].querySelector('.teach').classList.add('heigth');
+  //       }
+  //       if (ccount === -1) {
+  //         arrImg[ccount + 4].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 5].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 9].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 10].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 6].querySelector('.teach').classList.remove('heigthh');
+  //         arrImg[ccount + 8].querySelector('.teach').classList.remove('heigthh');
+  //         arrImg[ccount + 7].querySelector('.teach').classList.remove('heigth');
+  //         ccount = arrImg.length - 12;
+
+  //         arrImg[ccount + 4].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 5].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 9].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 10].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 6].querySelector('.teach').classList.add('heigthh');
+  //         arrImg[ccount + 8].querySelector('.teach').classList.add('heigthh');
+  //         arrImg[ccount + 7].querySelector('.teach').classList.add('heigth');
+  //       }
+
+  //     };
+  //     // }
+
+
+  //     // if(countWidth < arrImg.length){
+  //     document.querySelector('.nextt').onclick = function () {
+  //       // console.log("111")
+  //       // if(countt < arrImg.length-3){
+  //       // Trans[0].style.transitionDuration = 500 + 'ms';
+  //       if (ccount !== arrImg.length - 11) {
+  //         arrImg[ccount + 4].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 5].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 9].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 10].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 6].querySelector('.teach').classList.remove('heigthh');
+  //         arrImg[ccount + 8].querySelector('.teach').classList.remove('heigthh');
+  //         arrImg[ccount + 7].querySelector('.teach').classList.remove('heigth');
+  //         ccount++;
+  //         console.log(ccount)
+  //         arrImg[ccount + 4].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 5].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 9].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 10].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 6].querySelector('.teach').classList.add('heigthh');
+  //         arrImg[ccount + 8].querySelector('.teach').classList.add('heigthh');
+  //         arrImg[ccount + 7].querySelector('.teach').classList.add('heigth');
+  //       }
+  //       if (ccount === arrImg.length - 11) {
+  //         arrImg[ccount + 4].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 5].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 9].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 10].querySelector('.teach').classList.remove('heigthhh');
+  //         arrImg[ccount + 6].querySelector('.teach').classList.remove('heigthh');
+  //         arrImg[ccount + 8].querySelector('.teach').classList.remove('heigthh');
+  //         arrImg[ccount + 7].querySelector('.teach').classList.remove('heigth');
+  //         // position = 0;
+  //         // countt = 2;
+  //         ccount = 0;
+
+
+  //         arrImg[ccount + 4].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 5].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 9].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 10].querySelector('.teach').classList.add('heigthhh');
+  //         arrImg[ccount + 6].querySelector('.teach').classList.add('heigthh');
+  //         arrImg[ccount + 8].querySelector('.teach').classList.add('heigthh');
+  //         arrImg[ccount + 7].querySelector('.teach').classList.add('heigth');
+  //       }
+  //     }
+  //   };
+  // }
+  // else {
+  //   arrImg[ccount + 4].querySelector('.teach').classList.remove('heigthhh');
+  //   arrImg[ccount + 5].querySelector('.teach').classList.remove('heigthhh');
+  //   arrImg[ccount + 9].querySelector('.teach').classList.remove('heigthhh');
+  //   arrImg[ccount + 10].querySelector('.teach').classList.remove('heigthhh');
+  //   arrImg[ccount + 6].querySelector('.teach').classList.remove('heigthh');
+  //   arrImg[ccount + 8].querySelector('.teach').classList.remove('heigthh');
+  //   arrImg[ccount + 7].querySelector('.teach').classList.remove('heigth');
+  // }
+
+
+
+
+  var forEach = function (array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
+      callback.call(scope, i, array[i]);
+    }
+  };
+
+  var spinner = document.querySelector("#spinner"),
+    angle = 0,
+    images = document.querySelectorAll("#spinner figure"),
+    numpics = images.length,
+    degInt = 360 / numpics,
+    start = 0,
+    current = 1;
+
+  forEach(images, function (index, value) {
+    images[index].style.webkitTransform = "rotateY(-" + start + "deg)";
+    images[index].style.transform = "rotateY(-" + start + "deg)";
+    images[index].addEventListener("click", function () {
+      if (this.classList.contains('current')) {
+        this.classList.toggle("focus");
       }
-      // console.log(arrImg[8]);
-      // console.log(arrImg[8].dataset.slickIndex);
-      var ccount = 0;
-      var countWidth = 0;
-      arrImg[ccount + 5].querySelector('.teach').classList.add('heigthhh');
-      arrImg[ccount + 6].querySelector('.teach').classList.add('heigthh');
-      arrImg[ccount + 7].querySelector('.teach').classList.add('heigth');
-      arrImg[ccount + 8].querySelector('.teach').classList.add('heigthh');
-      arrImg[ccount + 9].querySelector('.teach').classList.add('heigthhh');
+    })
+    start = start + degInt;
+  });
 
-      var next = document.getElementsByClassName("slick-next");
-      next[0].classList.add('nextt');
-      var prev = document.getElementsByClassName("slick-prev");
-      prev[0].classList.add('prevv');
-
-      document.querySelector('.prevv').onclick = function () {
-        if (ccount !== -1) {
-          arrImg[ccount + 5].querySelector('.teach').classList.remove('heigthhh');
-          arrImg[ccount + 9].querySelector('.teach').classList.remove('heigthhh');
-          arrImg[ccount + 6].querySelector('.teach').classList.remove('heigthh');
-          arrImg[ccount + 8].querySelector('.teach').classList.remove('heigthh');
-          arrImg[ccount + 7].querySelector('.teach').classList.remove('heigth');
-          ccount--;
-          console.log(ccount)
-          arrImg[ccount + 5].querySelector('.teach').classList.add('heigthhh');
-          arrImg[ccount + 9].querySelector('.teach').classList.add('heigthhh');
-          arrImg[ccount + 6].querySelector('.teach').classList.add('heigthh');
-          arrImg[ccount + 8].querySelector('.teach').classList.add('heigthh');
-          arrImg[ccount + 7].querySelector('.teach').classList.add('heigth');
-        }
-        if (ccount === -1) {
-          arrImg[ccount + 5].querySelector('.teach').classList.remove('heigthhh');
-          arrImg[ccount + 9].querySelector('.teach').classList.remove('heigthhh');
-          arrImg[ccount + 6].querySelector('.teach').classList.remove('heigthh');
-          arrImg[ccount + 8].querySelector('.teach').classList.remove('heigthh');
-          arrImg[ccount + 7].querySelector('.teach').classList.remove('heigth');
-          ccount = arrImg.length - 12;
-
-          arrImg[ccount + 5].querySelector('.teach').classList.add('heigthhh');
-          arrImg[ccount + 9].querySelector('.teach').classList.add('heigthhh');
-          arrImg[ccount + 6].querySelector('.teach').classList.add('heigthh');
-          arrImg[ccount + 8].querySelector('.teach').classList.add('heigthh');
-          arrImg[ccount + 7].querySelector('.teach').classList.add('heigth');
-        }
-
-      };
-      // }
-
-
-      // if(countWidth < arrImg.length){
-      document.querySelector('.nextt').onclick = function () {
-        // console.log("111")
-        // if(countt < arrImg.length-3){
-        // Trans[0].style.transitionDuration = 500 + 'ms';
-        if (ccount !== arrImg.length - 11) {
-          arrImg[ccount + 5].querySelector('.teach').classList.remove('heigthhh');
-          arrImg[ccount + 9].querySelector('.teach').classList.remove('heigthhh');
-          arrImg[ccount + 6].querySelector('.teach').classList.remove('heigthh');
-          arrImg[ccount + 8].querySelector('.teach').classList.remove('heigthh');
-          arrImg[ccount + 7].querySelector('.teach').classList.remove('heigth');
-          ccount++;
-          console.log(ccount)
-          arrImg[ccount + 5].querySelector('.teach').classList.add('heigthhh');
-          arrImg[ccount + 9].querySelector('.teach').classList.add('heigthhh');
-          arrImg[ccount + 6].querySelector('.teach').classList.add('heigthh');
-          arrImg[ccount + 8].querySelector('.teach').classList.add('heigthh');
-          arrImg[ccount + 7].querySelector('.teach').classList.add('heigth');
-        }
-        if (ccount === arrImg.length - 11) {
-          // Trans[0].style.transitionDuration = 0 + 's';
-          arrImg[ccount + 5].querySelector('.teach').classList.remove('heigthhh');
-          arrImg[ccount + 9].querySelector('.teach').classList.remove('heigthhh');
-          arrImg[ccount + 6].querySelector('.teach').classList.remove('heigthh');
-          arrImg[ccount + 8].querySelector('.teach').classList.remove('heigthh');
-          arrImg[ccount + 7].querySelector('.teach').classList.remove('heigth');
-          // position = 0;
-          // countt = 2;
-          ccount = 0;
-
-          arrImg[ccount + 5].querySelector('.teach').classList.add('heigthhh');
-          arrImg[ccount + 9].querySelector('.teach').classList.add('heigthhh');
-          arrImg[ccount + 6].querySelector('.teach').classList.add('heigthh');
-          arrImg[ccount + 8].querySelector('.teach').classList.add('heigthh');
-          arrImg[ccount + 7].querySelector('.teach').classList.add('heigth');
-        }
-      }
-    };
+  function setCurrent(current) {
+    document.querySelector('figure#spinner figure:nth-child(' + current + ')').classList.add('current');
   }
+  var ss_icon = document.querySelectorAll(".ss-icon");
+
+  ss_icon[1].addEventListener("click", function galleryspin() {
+    forEach(images, function (index, value) {
+      images[index].classList.remove('current');
+      images[index].classList.remove('focus');
+      images[index].classList.remove('caption');
+    })
+
+    angle = angle - degInt;
+    current = current - 1;
+    if (current == 0) {
+      current = numpics;
+    }
+
+    spinner.setAttribute("style", "-webkit-transform: rotateY(" + angle + "deg); transform: rotateY(" + angle + "deg)");
+    setCurrent(current);
+  })
+  ss_icon[0].addEventListener("click", function galleryspin() {
+    forEach(images, function (index, value) {
+      images[index].classList.remove('current');
+      images[index].classList.remove('focus');
+      images[index].classList.remove('caption');
+    })
+
+    angle = angle + degInt;
+    current = (current + 1);
+    if (current > numpics) {
+      current = 1;
+    }
+
+    spinner.setAttribute("style", "-webkit-transform: rotateY(" + angle + "deg); transform: rotateY(" + angle + "deg)");
+    setCurrent(current);
+  })
+  document.body.onkeydown = function (e) {
+    switch (e.which) {
+      case 37: // left cursor
+        galleryspin('-');
+        break;
+
+      case 39: // right cursor
+        galleryspin('');
+        break;
+
+      case 90: // Z - zoom image in forefront image
+        document.querySelector('figure#spinner figure.current').classList.toggle('focus');
+        break;
+
+      case 67: // C - show caption for forefront image
+        document.querySelector('figure#spinner figure.current').classList.toggle('caption');
+        break;
+
+      default:
+        return; // exit this handler for other keys
+    }
+    e.preventDefault();
+  }
+
+  function mouseMove() {
+
+  }
+
+  function mouseUp() {
+    document.removeEventListener("mousemove", mouseMove, false);
+    document.removeEventListener("mouseup", mouseUp, false);
+  }
+
+  spinner.addEventListener("mousedown", function (e) {
+    var startX = e.pageX;
+
+    document.addEventListener("mousemove", mouseMove, false);
+    document.addEventListener("mouseup", mouseUp, false);
+  }, false);
+
+  setCurrent(1);
   // }
 
   /******/

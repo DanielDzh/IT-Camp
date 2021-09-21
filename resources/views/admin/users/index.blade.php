@@ -35,27 +35,27 @@
 <div class="card">
   
   <div class="card-body p-0">
-    <table class="table table-striped projects">
+    <table style = "text-align: center;" class="table table-striped projects">
         <thead>
             <tr>
                 <th style="width: 1%">
                     id
                 </th>
                 <th style="width: 20%">
-                    Name
+                    Ім'я
                 </th>
                 <th style="width: 20%">
-                    Lastname
+                    Прізвище
                 </th>
                 
                 <th style="width: 8%" class="text-center">
-                    Email
+                    Пошта
+                </th>
+                <th style="width: 15%" class="text-center">
+                    Телефон
                 </th>
                 <th style="width: 8%" class="text-center">
-                    Phone
-                </th>
-                <th style="width: 8%" class="text-center">
-                    Status
+                    Статус
                 </th>
             </tr>
         </thead>
@@ -81,14 +81,14 @@
                     
                 </td> -->
                 <td class="project-state">
-                    <span class="badge badge-success">Success</span>
+                    <span class="badge badge-success">Успіх</span>
                 </td>
                 <td class="project-actions text-right">
                     
                     <a class="btn btn-info btn-sm" href="{{route('users.edit', $user['id'] )}}">
                         <i class="fas fa-pencil-alt">
                         </i>
-                        Edit
+                        Редагувати
                     </a>
                 </td>
                 <td>
@@ -98,7 +98,7 @@
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            Видалити
                         </button>
 
                     </form>

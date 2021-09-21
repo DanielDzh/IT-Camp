@@ -273,7 +273,7 @@
                 </div>
    
 
-        <div class="reviews_block">
+        <div class="teach_slider_main">
             <div style = "margin: 50px;" class="teach_slider">
                 @foreach($teachers as $teacher )
                 <div class="slide">
@@ -296,6 +296,32 @@
                 @endforeach   
             </div>
         </div>
+        <div id="carousel">
+<figure id="spinner">
+    
+    @foreach($teachers as $teacher )
+    <figure>
+                    <div class="teach">
+                        <div>
+                            <img src="{{ $teacher['url'] }}" alt="" loading="lazy">
+                        </div>
+                        <div style="font-weight: bold;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding: 20px 0px;">
+                            {{ $teacher['name'] }}  {{ $teacher['lastname'] }}
+                        </div>
+                        <div style="font-weight: 600;font-size: 14px;line-height: 140.4%;text-align: center;color: #0D3C61; padding-bottom: 20px;">
+                            {{ $teacher['profession'] }} 
+                        </div>
+                        <div style="font-weight: 600;font-size: 9px;line-height: 11px;color: #2D5772; text-align: start;">
+                            {{ $teacher['description'] }} 
+                        </div>
+                    </div>
+                    </figure>
+                @endforeach 
+</div>
+<span style=float:left class="ss-icon ss-icon_prev"></span>
+<span style=float:right class="ss-icon ss-icon_next"></span>
+        </div>
+
             <div class="galery">
                 <div class="galery_text">
                     Галерея IT табору
@@ -313,13 +339,6 @@
                 <div id = "popup" class = "popup">
                     <div class="popup_body">
                         <div id = "popup_content" class="popup_content">
-                            <!-- <a href="" class="popup_close close-popup">X</a> -->
-                            <!-- <a href="https://www.instagram.com/intitaedu/"><img src="img/instagram (3) 1.svg" alt=""></a>
-                            <a href="https://t.me/IT_Academy_Vinnytsia"><img src="img/telegram (2) 1.svg" alt=""></a>
-                            <a href="https://www.facebook.com/intita.it"><img src="img/facebook 3.svg" alt=""></a>
-                            <a href="https://www.youtube.com/c/ITAcademyVinnytsia"><img src="img/youtube 3.svg" alt=""></a> -->
-                            <!-- <a href="https://twitter.com/INTITA_EDU"><img src="img/twitter (1) 3.svg" alt=""></a>  -->
-                            <!-- <a href="viber://chat?number=+380631892256"><img src="img/viber 3.svg" alt=""></a>                        -->
                         </div>
                     </div>
                 </div>
@@ -358,13 +377,11 @@
                 </div>
             </div>
         @endforeach
-                   
-
+        
                      
 
                     </div> 
                 </div>
             </div>
-        </div>
-
+            
 @stop

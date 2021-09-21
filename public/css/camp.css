@@ -1,7 +1,14 @@
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+body{
+    padding-bottom: 0px;
+}
 *{
     margin: 0;
 }
-
 .sulka{
     color: black;
     text-decoration: none;
@@ -22,6 +29,19 @@
     line-height: 26px;
     text-align: center;
     padding: 20px;
+}
+.ukr:hover, .rus:hover{
+    text-decoration: underline;
+    color: #3BA1FF;
+}
+.ukr{
+    color: #000;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.rus{
+    color: #000;
+    text-decoration: none;
 }
 .header_telephone, .header_gmail, .header_adress{
     margin-right: 40px;
@@ -85,6 +105,9 @@
     border-radius: 24px;
     width: 350px;
     height: 70px;
+}
+.block_reg_submit:hover{
+    box-shadow: 0 0 5px 1px rgb(255, 255, 255, 2);
 }
 .block_awaits_you{
     text-align: center;
@@ -352,7 +375,9 @@
     max-width: 1100px;
     margin: 0 auto; 
 } */
-
+.teach_slider_main{
+    display: none;
+}
 .reviews_block_first{
     position: relative;
 }
@@ -505,16 +530,16 @@
     height: 500px;
   }
   .teach.heigthhh{
-    /* transform: translate(0%, 60%); */
+    transform: translate(0%, 60%);
   }
   .teach.heigth{
     /* transition: all 4.8s ease 4.8s; */
     /* transition: height 2s .5s; */
-    transform: scale(1.6) ;
+    transform: scale(1.6);
     margin-top: 230px;
   }
   .teach.heigthh{
-   transform: scale(1.3);
+   transform: scale(1.3) translate(0%, 40%);
   }
 .rev_slider .photo{
     width: 40px;
@@ -581,8 +606,11 @@
     .slick-next:before {
         content: '›';
     }
+    .ss-icon_next::before{
+        content: '›';
+    }
 
-    .slick-prev, .slick-next {
+    .slick-prev, .slick-next, .ss-icon_next, .ss-icon_prev{
         font-size: 0;
     line-height: 0;
     position: absolute;
@@ -599,7 +627,7 @@
     button, select {
         text-transform: none;
     }
-    .slick-prev:before, .slick-next:before {
+    .slick-prev:before, .slick-next:before, .ss-icon_next:before, .ss-icon_prev:before {
         font-family: 'slick';
         font-size: 50px;
         line-height: 1;
@@ -620,7 +648,7 @@
     .slick-prev {
         left: -45px;
     }
-    .slick-prev::before {
+    .slick-prev::before, .ss-icon_prev:before {
         content: "‹";
     } 
 
@@ -842,6 +870,15 @@
 }
 
 @media (max-width: 768px){
+    .teach_slider_main{
+        display: block;
+    }
+    #carousel{
+        display: none;
+    }
+    .ss-icon{
+        display: none;
+    }
     .block_reg_age{
         font-size: 30px;
     }
@@ -908,11 +945,11 @@
         max-width: 60%;
     }
     .slick-next{
-        right: -10px;
+        right: -25px;
     }
     .slick-prev:before, .slick-next:before{
         font-size: 35px;
-        padding: 5px 19px 10px 22px;
+        padding: 1px 15px 2px 15px;
     }
     .reviews_block_first, .reviews_block_second{
         max-width: 400px;
@@ -1012,6 +1049,8 @@
         width: 60%;
     }
     .regull{
+        opacity: 0;
+        /* width: 20%; */
         display: block;
     }
     .header_telephone, .header_gmail, .header_adress{
@@ -1326,6 +1365,9 @@
     padding: 10px;
     margin: 0 auto;
  }
+ .teach img{
+     width: 100px;
+ }
   .carousel {
     /* position: relative; */
     /* width: 398px; */
@@ -1409,4 +1451,76 @@
     width: 20%;
   } */
 
+  
+  /* #carousel{
+      display: block;
+  } */
+  p { 
+    margin-top: 8rem;
+    font-size: 1rem;
+    color: #777;
+  } 
+  div#carousel { 
+    perspective: 1200px; 
+    padding-top: 5%; 
+    font-size:0; 
+    margin-bottom: 3rem; 
+  }
+  figure#spinner { 
+    transform-style: preserve-3d; 
+    height: 500px; 
+    transform-origin: 50% 50% -400px; 
+    transition: 1s; 
+  } 
+  figure#spinner figure { 
+    width: 20%; 
+    max-width: 500px; 
+    position: absolute; 
+    left: 40%;
+    transform-origin: 50% 50% -400px;
+    outline:1px solid transparent; 
+    overflow: hidden;
+    transition: 1s;
+  }
+  figure#spinner figure.focus { 
+    width: 26%; 
+    left: 37%; 
+    margin-top: -3rem; 
+  } 
+  figure#spinner figure .teach { 
+    width: 100%; 
+  } 
+  figcaption { 
+    position: absolute; 
+    top: 100%; 
+    width: 100%; 
+    padding: .3rem; 
+    z-index: 2; 
+    font-size: 1.1rem; 
+    background: rgba(0, 0, 0, 0); 
+    transition: .6s; 
+  }
+  figure#spinner figure.current:hover figcaption,
+  figure#spinner figure.current.caption figcaption
+  { 
+    top: 90%; 
+    background: rgba(0, 0, 0, 0.5); 
+    bottom: 0; 
+  } 
+  div#carousel ~ span { 
+    color: rgb(0, 0, 0); 
+    margin: 5%; 
+    /* display: inline-block;  */
+    text-decoration: none; 
+    font-size: 2rem; 
+    transition: 0.6s color; 
+    position: relative; 
+    margin-top: -15rem; 
+    border-bottom: none; 
+    line-height: 0; 
+  }
+  div#carousel ~ span:hover { 
+    color: #888; 
+    cursor: pointer; 
+  }
   
