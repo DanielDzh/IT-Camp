@@ -7,7 +7,7 @@
     <title>Camp</title>
     
     @include('layouts.styles') 
-    <!-- @include('layouts.scripts') -->
+  
     
     </head>
 <body>
