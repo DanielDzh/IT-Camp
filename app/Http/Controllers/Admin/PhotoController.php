@@ -42,6 +42,7 @@ class PhotoController extends Controller
     public function store(Request $request)
     {
         Photo::create($request->only(['url', 'alt_name']));
+
         return redirect()->back()->withSuccess('Нову картинку додано успішно');
     }
 
@@ -80,6 +81,7 @@ class PhotoController extends Controller
     public function update(Request $request, Photo $photo)
     {
         $photo->update($request->only(['url', 'alt_name']));
+        
         return redirect()->back()->withSuccess('Успішно редаговано картинку: '.$photo->alt_name);
     }
 
