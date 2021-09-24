@@ -70,7 +70,7 @@
                 </td>
                 
                 <td>
-                <img src="{{url( $photo['url'] )}}">
+                <img src="{{url( $photo['url'] )}}" width="300px">
                 </td>
                 <td>
                     {{ $photo['alt_name'] }}
