@@ -24,11 +24,11 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-    <div class="row">
+    <div style = "margin-left: 20px;" class="row">
             <a href="{{route('abouts.create')}}" class="nav-link ">
-                    <div class="card-footer">
+                    <!-- <div class="card-footer"> -->
                     <button type="" class="btn btn-primary">Додати</button>
-                    </div>
+                    <!-- </div> -->
             </a>
                 
     </div>
@@ -43,24 +43,24 @@
 <div class="card">
   
   <div class="card-body p-0">
-    <table class="table table-striped projects">
+    <table style = "text-align: center;"class="table table-striped projects">
         <thead>
             <tr>
                 <th style="width: 1%">
                     id
                 </th>
                 <th style="width: 20%">
-                    Description
+                    Опис
                 </th>
-                <th style="width: 30%">
-                    Imeges
+                <th style="width: 25%">
+                    Зображення
                 </th>
                 <th>
-                    Alt_name
+                    Альтернативна назва
                 </th>
 
                 <th style="width: 8%" class="text-center">
-                    Status
+                    Статус
                 </th>
             </tr>
         </thead>

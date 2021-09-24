@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
         <div class="col-sm-6">
-            <h1 class="m-0">Edit registereds :{{$registereds['name']}}</h1>
+            <h1 class="m-0">Редагувати реєстрованого : {{$registereds['name']}}</h1>
           </div><!-- /.col -->
            
 
@@ -39,23 +39,23 @@
                 <div class="card-body">
 
                  <div class="form-group">
-                    <label for="exampleInputEmail1">Name</label>
-                    <input type="text" value="{{$registereds['name']}}" name="name" class="form-control" id="text" placeholder="Name" required>
+                    <label for="exampleInputEmail1">Ім'я</label>
+                    <input type="text" value="{{$registereds['name']}}" name="name" class="form-control" id="text" placeholder="Ім'я" required>
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Lastname</label>
-                    <input type="text" value="{{$registereds['lastname']}}" name="lastname" class="form-control" id="text" placeholder="Lastname" required>
+                    <label for="exampleInputEmail1">Прізвище</label>
+                    <input type="text" value="{{$registereds['lastname']}}" name="lastname" class="form-control" id="text" placeholder="Прізвище" required>
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
-                    <input type="text" value="{{$registereds['email']}}" name="profession" class="form-control" id="text" placeholder="Profession" required>
+                    <label for="exampleInputEmail1">Пошта</label>
+                    <input type="text" value="{{$registereds['email']}}" name="profession" class="form-control" id="text" placeholder="Пошта" required>
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Phone</label>
-                    <input type="text" value="{{$registereds['phone']}}" name="description" class="form-control" id="text" placeholder="Description" required>
+                    <label for="exampleInputEmail1">Телефон</label>
+                    <input type="text" value="{{$registereds['phone']}}" name="description" class="form-control" id="text" placeholder="Телефон" required>
                   </div>
                   
                   
@@ -64,7 +64,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Update</button>
+                  <button type="submit" class="btn btn-primary">Оновити</button>
                 </div>
               </form>
             </div>
