@@ -43,7 +43,7 @@
 <div class="card">
   
   <div class="card-body p-0">
-    <table class="table table-striped projects">
+    <table style = "text-align: center;" class="table table-striped projects">
         <thead>
             <tr>
                 <th style="width: 1%">
@@ -53,7 +53,7 @@
                     Description
                 </th>
                 <th style="width: 30%">
-                    Imeges
+                    Images
                 </th>
                 <th>
                     Alt_name
@@ -74,7 +74,7 @@
                     {{ $entertainment['description'] }}
                 </td>
                 <td>
-                    <img src="{{url( $entertainment['url'] )}}">
+                    <img style = "width: 50px;" src="{{url( $entertainment['url'] )}}">
                 </td>
                 <td>
                     {{ $entertainment['alt_name'] }}

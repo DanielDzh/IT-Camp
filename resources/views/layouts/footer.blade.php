@@ -25,14 +25,14 @@
             <div id = "popupp" class = "popupp">
                 <div class="popupp_body">
                     <div id = "popupp_content" class="popupp_content">
-                        <div class="sharethis-sticky-share-buttons"></div>
+                        <div class = "error"><div class="sharethis-sticky-share-buttons"></div></div>
                         <!-- <a href="" class="popupp_close close-poppup">X</a> -->
-                        <a href="https://www.instagram.com/intitaedu/"><img src="img/instagram (3) 1.svg" alt=""></a>
+                        <!-- <a href="https://www.instagram.com/intitaedu/"><img src="img/instagram (3) 1.svg" alt=""></a>
                         <a href="https://t.me/IT_Academy_Vinnytsia"><img src="img/telegram (2) 1.svg" alt=""></a>
                         <a href="https://www.facebook.com/intita.it"><img src="img/facebook 3.svg" alt=""></a>
                         <a href="https://www.youtube.com/c/ITAcademyVinnytsia"><img src="img/youtube 3.svg" alt=""></a>
                         <a href="https://twitter.com/INTITA_EDU"><img src="img/twitter (1) 3.svg" alt=""></a> 
-                        <a href="viber://chat?number=+380631892256"><img src="img/viber 3.svg" alt=""></a>                       
+                        <a href="viber://chat?number=+380631892256"><img src="img/viber 3.svg" alt=""></a>                        -->
                     </div>
                 </div>
             </div>
