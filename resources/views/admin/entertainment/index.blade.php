@@ -25,10 +25,8 @@
     </div>
     <!-- /.content-header -->
     <div class="row">
-            <a href="{{route('entertainments.create')}}" class="nav-link ">
-                    <div class="card-footer">
+            <a style = "margin-left: 13px;"href="{{route('entertainments.create')}}" class="nav-link ">
                     <button type="" class="btn btn-primary">Додати</button>
-                    </div>
             </a>
                 
     </div>
@@ -46,21 +44,21 @@
     <table style = "text-align: center;" class="table table-striped projects">
         <thead>
             <tr>
-                <th style="width: 1%">
+                <th style="width: 1%; vertical-align: middle;">
                     id
                 </th>
-                <th style="width: 20%">
-                    Description
+                <th style="width: 20%; vertical-align: middle;">
+                    Опис
                 </th>
-                <th style="width: 30%">
-                    Images
+                <th style="width: 30%; vertical-align: middle;">
+                    Зображення
                 </th>
-                <th>
-                    Alt_name
+                <th style = "vertical-align: middle;">
+                    Альтернативна назва
                 </th>
 
-                <th style="width: 8%" class="text-center">
-                    Status
+                <th style="width: 8%; vertical-align: middle;" class="text-center">
+                    Статус
                 </th>
             </tr>
         </thead>
@@ -83,14 +81,14 @@
                     
                 </td> -->
                 <td class="project-state">
-                    <span class="badge badge-success">Success</span>
+                    <span class="badge badge-success">Успіх</span>
                 </td>
                 <td class="project-actions text-right">
                     
                     <a class="btn btn-info btn-sm" href="{{route('entertainments.edit', $entertainment['id'] )}}">
                         <i class="fas fa-pencil-alt">
                         </i>
-                        Edit
+                        Редагувати
                     </a>
                 </td>
                 <td>
@@ -100,7 +98,7 @@
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            Видалити
                         </button>
 
                     </form>

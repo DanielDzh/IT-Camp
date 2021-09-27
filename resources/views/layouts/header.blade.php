@@ -61,19 +61,19 @@
                 <div class="header_buttons">
                 <ul class="header_list">
                     <li>
-                        <a href="">Про нас</a>
+                        <a class = "sulka" href="javascript://0">Про нас</a>
                     </li>
                     <li>
-                        <a href="">Програма</a>
+                        <a class = "sulka" href="javascript://0">Програма</a>
                     </li>
                     <li>
-                        <a href="">Викладачі</a>
+                        <a class = "sulka" href="javascript://0">Викладачі</a>
                     </li>
                     <li>
-                        <a href="">Галерея</a>
+                        <a class = "sulka" href="javascript://0">Галерея</a>
                     </li>
                     <li>
-                        <a href="">Відгуки</a>
+                        <a class = "sulka" href="javascript://0">Відгуки</a>
                     </li>
                 </ul>
                 </div>

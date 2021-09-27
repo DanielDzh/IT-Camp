@@ -35,7 +35,7 @@
     <div class="col-lg-14">
         <form class="form-iline my-2 my-lg-0" type="get"action="{{url('/search')}}">
             <input class="form-control mr-sm-2" name="query" type="search">
-            <button class="btn btn-outline-success my-2 my-sm-0 "type="submit">Search</button>
+            <button class="btn btn-outline-success my-3 "type="submit">Пошук</button>
         </form>
 
     </div>
@@ -49,30 +49,30 @@
     <table class="table table-striped projects">
         <thead>
             <tr>
-                <th style="width: 1%">
+                <th style="width: 1%; vertical-align: middle;">
                     id
                 </th>
-                <th style="width: 20%">
-                    Name
+                <th style="width: 20%; vertical-align: middle;">
+                    Ім'я
                 </th>
-                <th style="width: 20%">
-                    Lastname
+                <th style="width: 20%; vertical-align: middle;">
+                    Прізвище
                 </th>
-                <th style="width: 20%">
-                    Profession
+                <th style="width: 20%; vertical-align: middle;">
+                    Професія
                 </th>
-                <th style="width: 20%">
-                    Description
+                <th style="width: 20%; vertical-align: middle;">
+                    Опис
                 </th>
-                <th style="width: 20%">
-                    Imeges
+                <th style="width: 20%; vertical-align: middle;">
+                    Зображення
                 </th>
-                <th>
-                    Alt_name
+                <th style = "vertical-align: middle;">
+                    Альтернативна назва
                 </th>
 
-                <th style="width: 8%" class="text-center">
-                    Status
+                <th style="width: 8%; vertical-align: middle;" class="text-center">
+                    Статус
                 </th>
             </tr>
         </thead>
@@ -104,14 +104,14 @@
                     
                 </td> -->
                 <td class="project-state">
-                    <span class="badge badge-success">Success</span>
+                    <span class="badge badge-success">Успіх</span>
                 </td>
                 <td class="project-actions text-right">
                     
                     <a class="btn btn-info btn-sm" href="{{route('teachers.edit', $teacher['id'] )}}">
                         <i class="fas fa-pencil-alt">
                         </i>
-                        Edit
+                        Редагувати
                     </a>
                 </td>
                 <td>
@@ -121,7 +121,7 @@
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            Видалити
                         </button>
 
                     </form>

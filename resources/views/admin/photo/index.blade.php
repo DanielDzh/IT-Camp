@@ -26,9 +26,7 @@
     <!-- /.content-header -->
     <div class="row">
             <a href="{{route('photos.create')}}" class="nav-link ">
-                    <div class="card-footer">
-                    <button type="" class="btn btn-primary">Додати</button>
-                    </div>
+                    <button style = "margin-left: 14px;" type="" class="btn btn-primary">Додати</button>
             </a>
                 
     </div>
@@ -51,14 +49,14 @@
                 </th>
                 
                 <th style="width: 30%">
-                    Imeges
+                    Зображення
                 </th>
                 <th>
-                    Alt_name
+                    Альтернативна назва
                 </th>
 
                 <th style="width: 8%" class="text-center">
-                    Status
+                    Статус
                 </th>
             </tr>
         </thead>
@@ -70,7 +68,7 @@
                 </td>
                 
                 <td>
-                <img src="{{url( $photo['url'] )}}" width="300px">
+                <img style = "width: 40%;" src="{{url( $photo['url'] )}}">
                 </td>
                 <td>
                     {{ $photo['alt_name'] }}
@@ -79,14 +77,14 @@
                     
                 </td> -->
                 <td class="project-state">
-                    <span class="badge badge-success">Success</span>
+                    <span class="badge badge-success">Успіх</span>
                 </td>
                 <td class="project-actions text-right">
                     
                     <a class="btn btn-info btn-sm" href="{{route('photos.edit', $photo['id'] )}}">
                         <i class="fas fa-pencil-alt">
                         </i>
-                        Edit
+                        Редагувати
                     </a>
                 </td>
                 <td>
@@ -96,7 +94,7 @@
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            Видалити
                         </button>
 
                     </form>

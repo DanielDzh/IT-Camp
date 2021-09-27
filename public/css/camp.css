@@ -1088,6 +1088,7 @@ body{
     }
     .header_menu.active{
         display: block;
+        opacity: 0.95;
     }
     .header_telephone_media{
         display: flex;
