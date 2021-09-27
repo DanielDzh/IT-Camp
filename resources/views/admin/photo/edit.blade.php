@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Edit photos :{{$photos['url']}}</h1>
+            <h1 class="m-0">Редагувати фото :{{$photos['url']}}</h1>
           </div><!-- /.col -->
           
            
@@ -46,21 +46,21 @@
                     <input type="text" value="{{$photos['alt_name']}}" name="alt_name" class="form-control" id="text" placeholder="Назва зображення" required>
                   </div> -->
                   <div class="form-group">
-                        <label for="exampleInputEmail1">Alt_name</label>
+                        <label for="exampleInputEmail1">Альтернативна назва</label>
                         <input type="text" name="alt_name" value="{{$photos['alt_name']}}" class="form-control" id="text" placeholder="Description" required>
                      </div>
                   <div class="form-group">
                         <label for="feature_image">Додати зображення</label>
                         <input type="text" name="url" value="{{$photos['url']}}" id="feature_image"class="form-control" name="feature_image" value="" readonly>
                         <img src="{{$photos['url']}}" alt=""  class="img-uploaded" > 
-                        <a href="" class="popup_selector" data-inputid="feature_image">Select Image</a>
+                        <a href="" class="popup_selector" data-inputid="feature_image">Виберіть зображення</a>
                     </div>
                   
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Update</button>
+                  <button type="submit" class="btn btn-primary">Змінити</button>
                 </div>
               </form>
             </div>
@@ -71,9 +71,7 @@
     <!-- /.content -->
     <div class="row">
             <a href="{{route('photos.index')}}" class="nav-link ">
-                    <div class="card-footer">
-                    <button type="" class="btn btn-primary">Всі картинки</button>
-                    </div>
+                    <button style = "margin-left: 14px;" type="" class="btn btn-primary">Всі картинки</button>
                 </a>
           </div>
   </div>

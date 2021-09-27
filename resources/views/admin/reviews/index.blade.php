@@ -26,9 +26,7 @@
     <!-- /.content-header -->
     <div class="row">
             <a href="{{route('reviews.create')}}" class="nav-link ">
-                    <div class="card-footer">
-                    <button type="" class="btn btn-primary">Додати</button>
-                    </div>
+                    <button style = "margin-left: 14px;" type="" class="btn btn-primary">Додати</button>
             </a>
                 
     </div>
@@ -46,31 +44,31 @@
     <table class="table table-striped projects">
         <thead>
             <tr>
-                <th style="width: 1%">
+                <th style="width: 1%; vertical-align: middle;">
                     id
                 </th>
-                <th style="width: 20%">
-                    Name
+                <th style="width: 20%; vertical-align: middle;">
+                    Ім'я
                 </th>
-                <th style="width: 20%">
-                    Lastname
+                <th style="width: 20%; vertical-align: middle;">
+                    Прізвище
                 </th>
                 
-                <th style="width: 20%">
-                    Description
+                <th style="width: 20%; vertical-align: middle;">
+                    Професія
                 </th>
-                <th>
-                    Publishdate
+                <th style = "vertical-align: middle;">
+                    Дата публікації
                 </th>
-                <th style="width: 20%">
-                    Imeges
+                <th style="width: 20%; vertical-align: middle;">
+                    Зображення
                 </th>
-                <th>
-                    Alt_name
+                <th style = "vertical-align: middle;">
+                    Альтернативна назва
                 </th>
 
-                <th style="width: 8%" class="text-center">
-                    Status
+                <th style="width: 8%; vertical-align: middle;">
+                    Статус
                 </th>
             </tr>
         </thead>
@@ -108,7 +106,7 @@
                     <a class="btn btn-info btn-sm" href="{{route('reviews.edit', $review['id'] )}}">
                         <i class="fas fa-pencil-alt">
                         </i>
-                        Edit
+                        Редагувати
                     </a>
                 </td>
                 <td>
@@ -118,7 +116,7 @@
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" >
                             <i class="fas fa-trash">
                             </i>
-                            Delete
+                            Видалити
                         </button>
 
                     </form>

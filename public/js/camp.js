@@ -37,6 +37,7 @@
 
 
   let sulka = document.querySelectorAll(".sulka");
+  console.log(sulka.length);
   for (let a = 2; a < sulka.length; a++) {
     if (a == 2) {
       sulka[a].addEventListener("click", function () {

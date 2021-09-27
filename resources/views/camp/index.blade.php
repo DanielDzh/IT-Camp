@@ -79,7 +79,7 @@
                                         <div class="mb-3">
                                              <!-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label> -->
                         
-                                            <input placeholder = "Name" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                            <input placeholder = "Ім'я" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                             @error('name')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -94,7 +94,7 @@
                                         <div class="mb-3">
                                             <!-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Lastname') }}</label> -->
 
-                                                <input placeholder = "Lastname" id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
+                                                <input placeholder = "Прізвище" id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
 
                                                 @error('lastname')
                                                     <span class="invalid-feedback" role="alert">
@@ -106,7 +106,7 @@
                                         <div class="mb-3">
                                             <!-- <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label> -->
 
-                                                <input placeholder = "E-Mail Address" id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                                <input placeholder = "Пошта" id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                                 @error('email')
                                                     <span class="invalid-feedback" role="alert">
@@ -119,7 +119,7 @@
                                         <div class="mb-3">
                                             <!-- <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label> -->
 
-                                                <input placeholder = "Phone" id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+                                                <input placeholder = "Телефон" id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
 
                                                 @error('phone')
                                                     <span class="invalid-feedback" role="alert">
@@ -135,7 +135,7 @@
                         <div class="form-group row mb-0">
                             <!-- <div class="col-md-6 offset-md-4"> -->
                                 <button type="submit" class="btn btn-primary" style="width: 100%;">
-                                    {{ __('Register') }}
+                                    {{ __('Зареєструватись') }}
                                 </button>
                             <!-- </div> -->
                         </div>

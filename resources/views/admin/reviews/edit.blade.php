@@ -39,24 +39,24 @@
                 <div class="card-body">
 
                  <div class="form-group">
-                    <label for="exampleInputEmail1">Name</label>
+                    <label for="exampleInputEmail1">Ім'я</label>
                     <input type="text" value="{{$reviews['name']}}" name="name" class="form-control" id="text" placeholder="Name" required>
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Lastname</label>
+                    <label for="exampleInputEmail1">Прізвище</label>
                     <input type="text" value="{{$reviews['lastname']}}" name="lastname" class="form-control" id="text" placeholder="Lastname" required>
                   </div>
 
                   
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Description</label>
+                    <label for="exampleInputEmail1">Опис</label>
                     <input type="text" value="{{$reviews['description']}}" name="description" class="form-control" id="text" placeholder="Description" required>
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Profession</label>
+                    <label for="exampleInputEmail1">Професія</label>
                     <input type="text" value="{{$reviews['publishdate']}}" name="publishdate" class="form-control" id="text" placeholder="Publishdate" required>
                   </div>
                   
@@ -65,14 +65,14 @@
                     <input type="text" value="{{$reviews['alt_name']}}" name="alt_name" class="form-control" id="text" placeholder="Alt_name" required>
                   </div> -->
                   <div class="form-group">
-                        <label for="exampleInputEmail1">Alt_name</label>
+                        <label for="exampleInputEmail1">Альтернативна назва</label>
                         <input type="text" name="alt_name" value="{{$reviews['alt_name']}}" class="form-control" id="text" placeholder="Description" required>
                      </div>
                   <div class="form-group">
                         <label for="feature_image">Додати зображення</label>
                         <input type="text" name="url" value="{{$reviews['url']}}" id="feature_image"class="form-control" name="feature_image" value="" readonly>
                         <img src="{{$reviews['url']}}" alt=""  class="img-uploaded" > 
-                        <a href="" class="popup_selector" data-inputid="feature_image">Select Image</a>
+                        <a href="" class="popup_selector" data-inputid="feature_image">Виберіть зображення</a>
                     </div>
                   
                   
@@ -80,7 +80,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Update</button>
+                  <button type="submit" class="btn btn-primary">Змінити</button>
                 </div>
               </form>
             </div>
