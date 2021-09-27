@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Photo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class PhotoController extends Controller
 {
@@ -41,6 +42,7 @@ class PhotoController extends Controller
     public function store(Request $request)
     {
         Photo::create($request->only(['url', 'alt_name']));
+
         return redirect()->back()->withSuccess('Нову картинку додано успішно');
     }
 
@@ -79,6 +81,7 @@ class PhotoController extends Controller
     public function update(Request $request, Photo $photo)
     {
         $photo->update($request->only(['url', 'alt_name']));
+        
         return redirect()->back()->withSuccess('Успішно редаговано картинку: '.$photo->alt_name);
     }
 
@@ -91,6 +94,7 @@ class PhotoController extends Controller
     public function destroy(Photo $photo)
     {
         $photo->delete();
+        File::delete($photo->url);
         
         return redirect()->back()->withSuccess('Успішно видалено картинку: '.$photo->alt_name);
     }
