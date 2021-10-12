@@ -33,9 +33,6 @@
             <div class="header_lang">
                 <a class = "ukr">Укр</a><a class = "rus">Eng</a>
             </div>
-            <!-- <div class="header_shar">
-                <img src="img/share_2.svg" alt="">
-            </div> -->
             <div class="header_shar">
                     <a id = "popupp-link" href="javascript://0" class = "popupp-link"><img src="img/share_2.svg" alt=""></a>
             </div>

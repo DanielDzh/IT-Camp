@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="content">
-                @if (Route::has('login'))
+                <!-- @if (Route::has('login'))
                 <div class="">
                     @auth
                         <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
@@ -14,7 +14,7 @@
                         @endif
                     @endauth
                 </div>
-                 @endif
+                 @endif -->
 
             <div class="content_header">
                 <div class="content_header_icon">
@@ -77,8 +77,6 @@
                                     <form method="POST" action="{{ route('registereds.store') }}">
                                          @csrf
                                         <div class="mb-3">
-                                             <!-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label> -->
-                        
                                             <input placeholder = "Ім'я" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                             @error('name')
                                                 <span class="invalid-feedback" role="alert">
@@ -92,8 +90,6 @@
 
 
                                         <div class="mb-3">
-                                            <!-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Lastname') }}</label> -->
-
                                                 <input placeholder = "Прізвище" id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
 
                                                 @error('lastname')
@@ -104,8 +100,6 @@
                                         </div>
 
                                         <div class="mb-3">
-                                            <!-- <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label> -->
-
                                                 <input placeholder = "Пошта" id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                                 @error('email')
@@ -117,8 +111,6 @@
 
 
                                         <div class="mb-3">
-                                            <!-- <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label> -->
-
                                                 <input placeholder = "Телефон" id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
 
                                                 @error('phone')
@@ -133,19 +125,14 @@
                         
                         <div class="footer_fomr">
                         <div class="form-group row mb-0">
-                            <!-- <div class="col-md-6 offset-md-4"> -->
                                 <button type="submit" class="btn btn-primary" style="width: 100%;">
                                     {{ __('Зареєструватись') }}
                                 </button>
-                            <!-- </div> -->
                         </div>
                         </div>
                     </form>
 
                                     </div>
-                                    <!-- <div class="footer_fomr">
-                                      <button type="button" class="btn btn-primary" style="width: 100%;">Зареєструватись</button>
-                                    </div> -->
                                   </div>
                                 </div>
                               </div>
@@ -377,9 +364,6 @@
                 </div>
             </div>
         @endforeach
-        
-                     
-
                     </div> 
                 </div>
             </div>

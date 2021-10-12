@@ -3,13 +3,43 @@
   /*!******************************!*\
     !*** ./resources/js/camp.js ***!
     \******************************/
-  // window.onload = function () {
-  //   console.error(111);
-  // }
+  const title = window.document.title;
+  const url = window.document.location.href;
 
-  // console.log(document.documentElement.clientHeight);
-  // var h = document.querySelector("body");
-  // h.style.maxHeight = String(document.documentElement.clientHeight) + "px";
+  const $button_1 = document.querySelector('.popupp-link')
+  const $button_2 = document.querySelector('.popupp')
+
+  if (navigator.share) {
+    $button_1.addEventListener('click', share)
+    function share() {
+      navigator.share({
+        title: `${title}`,
+        url: `${url}`
+      })
+        .then(() => {
+          alert('успіх')
+        })
+        .catch(() => {
+          alert('помилка')
+        })
+    }
+    $button_2.addEventListener('click', share)
+    function share() {
+      navigator.share({
+        title: `${title}`,
+        url: `${url}`
+      })
+        .then(() => {
+          alert('успіх')
+        })
+        .catch(() => {
+          alert('помилка')
+        })
+    }
+  } else {
+    alert('не підтримує')
+  }
+
 
   $(function () {
     $(window).scroll(function () {
@@ -122,34 +152,7 @@
         // instead of a settings object
       ]
     });
-  }); // $(document).ready(function(){
-  // 	$('.slider').slick({
-  // 		arrows:true,
-  // 		// dots:true,
-  // 		centerMode:true,
-  // 		slidesToShow:3,
-  // 		autoplay:false,
-  // 		speed:1000,
-  // 		autoplaySpeed:800,
-  // 		centerPadding: 0,
-  // 		responsive:[
-  // 			{
-  // 				breakpoint: 768,
-  // 				settings: {
-  // 					slidesToShow:2
-  // 				}
-  // 			},
-  // 			{
-  // 				breakpoint: 550,
-  // 				settings: {
-  // 					slidesToShow:1
-  // 				}
-  // 			}
-  // 		]
-  // 	});
-  // });
-
-
+  });
 
   $(function () {
     $('.teach_slider').slick({
@@ -164,7 +167,6 @@
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-          // centerMode: true
         }
       }
       ]
@@ -183,7 +185,6 @@
   let unlock = true;
 
   const timeout = 800;
-  // if(popupLinks){
   function POPUP(arg) {
     const curentPopup = document.getElementById('popup');
 
@@ -195,11 +196,9 @@
       const curentPopup = document.getElementById('popup');
 
       var cart = arg.path[0].src;
-      // console.log(arg.path[0]);
       popupOpen(curentPopup, cart);
     });
   }
-  // }
 
   function popupOpen(curentPopup, cart) {
     if (curentPopup && unlock) {
@@ -558,6 +557,8 @@
   // }
 
   /******/
+
+
 })()
   ;
 

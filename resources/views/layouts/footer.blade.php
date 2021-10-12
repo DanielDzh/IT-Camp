@@ -25,7 +25,12 @@
             <div id = "popupp" class = "popupp">
                 <div class="popupp_body">
                     <div id = "popupp_content" class="popupp_content">
-                        <div class = "error"><div class="sharethis-sticky-share-buttons"></div></div>
+                        <div class = "error">
+                        <div class="share">
+                            <h2>Share now</h2>
+                            <button id = "button_share">Social Links</button>
+                        </div><div class="sharethis-sticky-share-buttons"></div></div>
+                        
                         <!-- <a href="" class="popupp_close close-poppup">X</a> -->
                         <!-- <a href="https://www.instagram.com/intitaedu/"><img src="img/instagram (3) 1.svg" alt=""></a>
                         <a href="https://t.me/IT_Academy_Vinnytsia"><img src="img/telegram (2) 1.svg" alt=""></a>
