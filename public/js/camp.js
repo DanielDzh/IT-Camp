@@ -40,7 +40,6 @@
     alert('не підтримує')
   }
 
-
   $(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() != 0) {
@@ -68,36 +67,37 @@
 
   let sulka = document.querySelectorAll(".sulka");
   console.log(sulka.length);
+  console.log(sulka.length);
   for (let a = 2; a < sulka.length; a++) {
-    if (a == 2) {
+    if (a == 2 || a == 7) {
       sulka[a].addEventListener("click", function () {
         $('html, body').animate({
           scrollTop: $('.block_awaits_you').offset().top - 0
         }, 0);
       });
     }
-    if (a == 3) {
+    if (a == 3 || a == 8) {
       sulka[a].addEventListener("click", function () {
         $('html, body').animate({
           scrollTop: $('.Enter').offset().top - 0
         }, 0);
       });
     }
-    if (a == 4) {
+    if (a == 4 || a == 9) {
       sulka[a].addEventListener("click", function () {
         $('html, body').animate({
           scrollTop: $('.teachers').offset().top - 0
         }, 0);
       });
     }
-    if (a == 5) {
+    if (a == 5 || a == 10) {
       sulka[a].addEventListener("click", function () {
         $('html, body').animate({
           scrollTop: $('.galery').offset().top - 0
         }, 0);
       });
     }
-    if (a == 6) {
+    if (a == 6 || a == 11) {
       sulka[a].addEventListener("click", function () {
         $('html, body').animate({
           scrollTop: $('.reviews').offset().top - 0
